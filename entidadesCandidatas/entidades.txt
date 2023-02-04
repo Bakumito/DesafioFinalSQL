@@ -1,0 +1,16 @@
+Estabelecimento
+Evento
+Usuário
+Cupom
+Assinatura
+Endereço
+Avaliação: para armazenar o histórico de avaliações realizadas pelos usuários ao longo do tempo.
+Conteúdo/Midia (foto, vídeo, texto)
+Pagamento: para armazenar informações sobre pagamentos de assinatura pelos estabelecimentos. (pode ser unificado em assinatura)
+Categoria: para classificar os estabelecimentos e eventos em categorias (por exemplo, restaurante, parque, museu, etc.)
+Imagem: para armazenar imagens de cada estabelecimento/evento. (pode ser unificado em conteudo / midia)
+Video: para armazenar videos de cada estabelecimento/evento. (pode ser unificado em conteudo / midia)
+Comentário: para armazenar comentários feitos pelos usuários em relação aos estabelecimentos/eventos. (pode ser unificado em conteudo/midia ou avaliacao)
+Notificação: para armazenar notificações enviadas aos usuários sobre ofertas, eventos e outras atualizações.
+Log de ações: para armazenar informações sobre as ações realizadas pelos usuários no aplicativo, como o uso de cupons, visualizações de estabelecimentos/eventos, entre outros.
+Funcionário: para armazenar informações sobre funcionários da Places Company responsáveis por verificar as informações publicadas no aplicativo.
