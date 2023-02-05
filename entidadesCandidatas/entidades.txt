@@ -20,20 +20,22 @@ Log de ações: para armazenar informações sobre as ações realizadas pelos u
 Funcionário: para armazenar informações sobre funcionários da Places Company responsáveis por verificar as informações publicadas no aplicativo.
 
 Usuario
-ID: identificador único do usuário;
-Nome: nome completo do usuário;
-CPF: CPF do usuário
-Email: endereço de email do usuário;
-Senha: senha do usuário para realizar login;
-Data de Cadastro: data em que o usuário se cadastrou na plataforma;
-Data de Nascimento: data de nascimento do usuário;
-Endereço: endereço completo do usuário; (possivelmente com chave estrangeira Endereco)
-Telefone: número de telefone do usuário;
-Tipo de conta: indica se o usuário é administrador ou usuário comum;
-Status da conta: indica se a conta do usuário está ativa ou desativada;
-Foto de Perfil: imagem que representa o usuário na plataforma;
+id: identificador único do usuário;
+nome: nome completo do usuário;
+cpf: CPF do usuário
+email: endereço de email do usuário;
+senha: senha do usuário para realizar login;
+telefone: número de telefone do usuário;
+dataCadastro: data em que o usuário se cadastrou na plataforma;
+dataNascimento: data de nascimento do usuário;
+tipoConta: indica se o usuário é administrador ou usuário comum;
+statusConta: indica se a conta do usuário está ativa ou desativada;
+fotoPerfil: imagem que representa o usuário na plataforma;
+
 Histórico de avaliações: lista de todas as avaliações realizadas pelo usuário; (possivelmente com chave estrangeira Avaliação)
 Histórico de cupons: lista de todos os cupons adquiridos pelo usuário. (possivelmente com chave estrangeira Cupom)
+
+endereço: endereço completo do usuário; (possivelmente com chave estrangeira Endereco)
 
 Estabelecimento
 ID: identificador único do estabelecimento
