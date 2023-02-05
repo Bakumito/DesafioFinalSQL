@@ -105,3 +105,20 @@ Data: data da avaliação
 Nota: nota de 0 a 5 atribuída pelo usuário
 Comentário: texto escrito pelo usuário sobre sua avaliação
 Resposta: Resposta do Estabelecimento (texto escrito pelo estabelecimento em resposta à avaliação
+
+Pagamento
+ID: um identificador único para cada pagamento
+DataPagamento: a data em que o pagamento foi efetuado
+Valor: o valor total do pagamento
+FormaPagamento: a forma como o pagamento foi efetuado (por exemplo, cartão de crédito, boleto, etc.)
+Status: o status atual do pagamento (por exemplo, pendente, aprovado, etc.)
+Observacao: quaisquer outros detalhes relevantes sobre o pagamento, como informações de cobrança ou descontos aplicados.
+talvez chaves estrangeiras de usuario e estabelecimento.
+
+ID: Um identificador único para a categoria
+Nome: O nome da categoria
+Descrição: Uma descrição detalhada da categoria
+Imagem: Uma imagem representativa da categoria
+Pai: Uma referência para a categoria pai, se existir. Isso pode ser usado para criar uma estrutura hierárquica de categorias. (auto relacionamento)
+DataCriacao: A data em que a categoria foi criada.
+DataAtualizacao: A data em que a categoria foi atualizada pela última vez.
