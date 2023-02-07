@@ -18,7 +18,7 @@
 
 9 - retirar status de estabelecimento
 
-10 - not null em assinatura, valor decimal 7,2 em assinatura.
+10 - not null em assinatura, valor decimal 7,2 em assinatura
 
 11 - ajustar tipagem de estado, cidade (small int) e endereco
 
@@ -31,3 +31,12 @@
 15 - colocar tiny int em categorias
 
 16 - criar tipo de evento
+
+Domínio e associativa não usa Manute. Intermediária usa meio Manute.
+
+
+localização para indicar os eventos próximos
+
+sistema de compra de ingressos para os eventos no sistema
+
+calendario de interesses em eventos nos eventos e para o usuário(publico e privado)
