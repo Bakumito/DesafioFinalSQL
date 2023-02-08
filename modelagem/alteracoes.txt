@@ -35,7 +35,14 @@
 Domínio e associativa não usa Manute. Intermediária usa meio Manute.
 
 
-localização para indicar os eventos próximos
+localização para indicar os eventos próximos - 
+A localização é funcionalidade da api para indicar os eventos próximos.
+Os eventos já estão ligados ao estabelecimento, que tem o seu endereço.
+Logo, os eventos ocorrem em algum estabelecimento, o que faz com que eles
+compartilhem o mesmo endereço.
+Se os eventos são independentes de estabelecimento, então existe a necessidade
+de criar uma tabela de endereço dos eventos, se não é independente, então
+os endereços dos estabelecimentos são os do evento.
 
 sistema de compra de ingressos para os eventos no sistema
 
