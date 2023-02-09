@@ -286,3 +286,8 @@ CREATE TABLE Contato (
     CONSTRAINT fk_idEstabelecimentoEventoCliente2 FOREIGN KEY (idEstabelecimentoEventoCliente)
         REFERENCES EstabelecimentoEventoCliente (id)
 );
+
+CREATE TABLE Imagem (
+  id int PRIMARY KEY IDENTITY(1,1),
+  imagemDados varbinary(MAX)
+);
