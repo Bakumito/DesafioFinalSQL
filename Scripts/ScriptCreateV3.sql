@@ -262,7 +262,7 @@ CREATE TABLE MidiaEvento (
 
  CREATE TABLE Entrada (
     id INT PRIMARY KEY IDENTITY(1,1),
-    idClienteEstabelecimentoInteresse INT,
+    idClienteEstabelecimentoInteresse INT NOT NULL,
     preco DECIMAL(7,2) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
