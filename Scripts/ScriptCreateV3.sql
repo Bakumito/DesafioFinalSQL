@@ -241,9 +241,29 @@ CREATE TABLE MidiaEvento (
         REFERENCES Proprietario (id)
  );
 
+ CREATE TABLE ClienteEstabelecimentoInteresse ( 
+    id INT PRIMARY KEY IDENTITY(1,1), 
+    idCliente INT NOT NULL,
+    idEstabelecimento INT NOT NULL,
+    CONSTRAINT fk_idCliente2 FOREIGN KEY (idCliente)
+        REFERENCES Cliente (id),
+    CONSTRAINT fk_idEstabelecimento3 FOREIGN KEY (idEstabelecimento)
+        REFERENCES Estabelecimento (id)
+ );
+
+ CREATE TABLE Entrada (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    idClienteEstabelecimentoInteresse INT PRIMARY KEY(1,1),
+    preco DECIMAL(7,2) NOT NULL,
+    idUsuarioCadastro INT NOT NULL,
+    dataCadastro DATE NOT NULL,
+    CONSTRAINT fk_idClienteEstabelecimentoInteresse FOREIGN KEY (idClienteEstabelecimentoInteresse)
+        REFERENCES ClientesEstabelecimentoInteresse (id)
+ );
+
  CREATE TABLE CupomEstabelecimento ( 
     id INT PRIMARY KEY IDENTITY(1,1), 
-    idEstabelecimento INT NOT NULL,
+    idEventoClienteFavorito INT NOT NULL,
     dataValidade DATETIME NOT NULL,
     hash VARCHAR(64) NOT NULL,
     status BOOLEAN NOT NULL, 
@@ -255,8 +275,8 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEstabelecimento FOREIGN KEY (idEstabelecimento)
-        REFERENCES Estabelecimento (id)
+    CONSTRAINT fk_idClienteEstabelecimentoInteresse FOREIGN KEY (idClienteEstabelecimentoInteresse)
+        REFERENCES ClienteEstabelecimentoInteresse (id)
  ); 
 
 CREATE TABLE MidiaEstabelecimento (
@@ -325,3 +345,12 @@ CREATE TABLE Avaliacao (
         REFERENCES EventoEstabelecimento (id)
 );
 
+CREATE TABLE Usuario ( 
+    id TINYINT PRIMARY KEY IDENTITY(1,1),
+    login VARCHAR(60) NOT NULL,
+    senha VARCHAR(64) NOT NULL,
+    idUsuarioCadastro INT NOT NULL,
+    dataCadastro DATE NOT NULL,
+    idUsuarioUltimaAlteracao INT,
+    dataUltimaAlteracao DATE
+);
