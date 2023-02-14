@@ -35,8 +35,8 @@ CREATE TABLE CategoriaEvento (
 CREATE TABLE Assinatura ( 
     id INT PRIMARY KEY IDENTITY(1,1),
     dataInicio DATE NOT NULL,
-    dataFim DATE NOT NULL,
-    status BOOLEAN NOT NULL,
+    dataFim DATE, 
+    status BIT NOT NULL,
     valor DECIMAL(7,2) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE Assinatura (
 CREATE TABLE ContatoEstabelecimento ( 
     id INT PRIMARY KEY IDENTITY(1,1),
     numero CHAR(11) NOT NULL,
-    whatsapp BOOLEAN NOT NULL,
+    whatsapp BIT NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
@@ -57,7 +57,7 @@ CREATE TABLE ContatoEstabelecimento (
 CREATE TABLE ContatoEvento ( 
     id INT PRIMARY KEY IDENTITY(1,1),
     numero CHAR(11) NOT NULL,
-    whatsapp BOOLEAN NOT NULL,
+    whatsapp BIT NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
@@ -67,7 +67,7 @@ CREATE TABLE ContatoEvento (
 CREATE TABLE ContatoCliente ( 
     id INT PRIMARY KEY IDENTITY(1,1),
     numero CHAR(11) NOT NULL,
-    whatsapp BOOLEAN NOT NULL,
+    whatsapp BIT NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
@@ -80,7 +80,7 @@ CREATE TABLE Proprietario (
     sobrenome VARCHAR(100),
     cpf CHAR(11) NOT NULL,
     dataNascimento DATE NOT NULL,
-    fotoPerfil BLOB,
+    fotoPerfil VARBINARY(MAX),
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(64) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE PagamentoAssinatura (
     idTipoPagamentoAssinatura TINYINT NOT NULL,
     dataVencimento DATE,
     dataPagamento DATE NOT NULL,
-    comprovante BLOB NOT NULL, 
+    comprovante BIT NOT NULL, 
     valorPago DECIMAL(7,2) NOT NULL,
     desconto DECIMAL(7,2),
     idUsuarioCadastro INT NOT NULL,
@@ -134,12 +134,12 @@ CREATE TABLE PagamentoAssinatura (
 
 CREATE TABLE Cliente ( 
     id INT PRIMARY KEY IDENTITY(1,1),
-    idContatoCliente INT NOT NULL, 
+    idContatoCliente INT, 
     nome VARCHAR(50) NOT NULL,
     sobrenome VARCHAR(100),
     cpf CHAR(11) NOT NULL,
     dataNascimento DATE NOT NULL,
-    fotoPerfil BLOB NOT NULL,
+    fotoPerfil VARBINARY(MAX),
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(64) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
@@ -149,6 +149,15 @@ CREATE TABLE Cliente (
     CONSTRAINT fk_idContatoCliente FOREIGN KEY (idContatoCliente)
         REFERENCES ContatoCliente (id)
 );
+
+CREATE TABLE MidiaCliente (
+	id int PRIMARY KEY IDENTITY(1,1),
+	idCliente INT,
+	foto VARBINARY(MAX),
+	video VARBINARY(MAX),
+	CONSTRAINT fk_idCliente FOREIGN KEY (idCliente) 
+		REFERENCES Cliente (id)
+)
 
 CREATE TABLE Evento ( 
     id INT PRIMARY KEY IDENTITY(1,1),
@@ -176,8 +185,8 @@ CREATE TABLE Evento (
 CREATE TABLE MidiaEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
     idEvento INT NOT NULL,
-    foto BLOB NOT NULL, 
-    video BLOB NOT NULL,
+    foto VARBINARY(MAX) NOT NULL, 
+    video VARBINARY(MAX) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
@@ -186,12 +195,22 @@ CREATE TABLE MidiaEvento (
         REFERENCES Evento (id)
  );
 
+ CREATE TABLE EventoClienteFavorito ( 
+    id INT PRIMARY KEY IDENTITY(1,1),
+    idCliente INT,
+    idEvento INT NOT NULL,
+    CONSTRAINT fk_idCliente FOREIGN KEY (idCliente)
+        REFERENCES Cliente (id),
+    CONSTRAINT fk_idEvento3 FOREIGN KEY (idEvento)
+        REFERENCES Evento (id)
+ ); 
+ 
  CREATE TABLE CupomEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
-    idEvento INT NOT NULL,
+    idEventoClienteFavorito INT NOT NULL,
     dataValidade DATETIME NOT NULL, 
     hash VARCHAR(64) NOT NULL,
-    status BOOLEAN NOT NULL,
+    status BIT NOT NULL,
     valor DECIMAL(2,1) NOT NULL,
     limite DECIMAL(4,2) NOT NULL,
     descricao VARCHAR(40) NOT NULL,
@@ -200,18 +219,8 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEvento2 FOREIGN KEY (idEvento)
-        REFERENCES Evento (id) 
- );
-
- CREATE TABLE EventoClienteFavorito ( 
-    id INT PRIMARY KEY IDENTITY(1,1),
-    idCliente INT NOT NULL,
-    idEvento INT NOT NULL,
-    CONSTRAINT fk_idCliente FOREIGN KEY (idCliente)
-        REFERENCES Cliente (id),
-    CONSTRAINT fk_idEvento3 FOREIGN KEY (idEvento)
-        REFERENCES Evento (id)
+    CONSTRAINT fk_idEventoClienteFavorito FOREIGN KEY (idEventoClienteFavorito)
+        REFERENCES EventoClienteFavorito (id) 
  );
 
  CREATE TABLE Estabelecimento ( 
@@ -243,7 +252,7 @@ CREATE TABLE MidiaEvento (
 
  CREATE TABLE ClienteEstabelecimentoInteresse ( 
     id INT PRIMARY KEY IDENTITY(1,1), 
-    idCliente INT NOT NULL,
+    idCliente INT,
     idEstabelecimento INT NOT NULL,
     CONSTRAINT fk_idCliente2 FOREIGN KEY (idCliente)
         REFERENCES Cliente (id),
@@ -253,20 +262,20 @@ CREATE TABLE MidiaEvento (
 
  CREATE TABLE Entrada (
     id INT PRIMARY KEY IDENTITY(1,1),
-    idClienteEstabelecimentoInteresse INT PRIMARY KEY(1,1),
+    idClienteEstabelecimentoInteresse INT NOT NULL,
     preco DECIMAL(7,2) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     CONSTRAINT fk_idClienteEstabelecimentoInteresse FOREIGN KEY (idClienteEstabelecimentoInteresse)
-        REFERENCES ClientesEstabelecimentoInteresse (id)
+        REFERENCES ClienteEstabelecimentoInteresse (id)
  );
 
  CREATE TABLE CupomEstabelecimento ( 
     id INT PRIMARY KEY IDENTITY(1,1), 
-    idEventoClienteFavorito INT NOT NULL,
+    idClienteEstabelecimentoInteresse INT NOT NULL,
     dataValidade DATETIME NOT NULL,
     hash VARCHAR(64) NOT NULL,
-    status BOOLEAN NOT NULL, 
+    status BIT NOT NULL, 
     valor DECIMAL(2,1) NOT NULL,
     limite DECIMAL(4,2), 
     descricao VARCHAR(40) NOT NULL,
@@ -282,8 +291,8 @@ CREATE TABLE MidiaEvento (
 CREATE TABLE MidiaEstabelecimento (
     id INT PRIMARY KEY IDENTITY(1,1),
     idEstabelecimento INT NOT NULL,
-    foto BLOB NOT NULL,
-    video BLOB NOT NULL,
+    foto VARBINARY(MAX) NOT NULL,
+    video VARBINARY(MAX) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
@@ -354,3 +363,4 @@ CREATE TABLE Usuario (
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE
 );
+
