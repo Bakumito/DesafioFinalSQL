@@ -93,7 +93,7 @@ CREATE TABLE Cidade (
     id SMALLINT PRIMARY KEY IDENTITY(1,1),
     idEstado TINYINT NOT NULL,
     nome VARCHAR(40) NOT NULL,
-    CONSTRAINT fk_idEstado FOREIGN KEY (idEstado)
+    CONSTRAINT fk_idEstado_Cidade FOREIGN KEY (idEstado)
         REFERENCES Estado (id)
 );
 
@@ -109,7 +109,7 @@ CREATE TABLE Endereco (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idCidade FOREIGN KEY (idCidade)
+    CONSTRAINT fk_idCidade_Endereco FOREIGN KEY (idCidade)
         REFERENCES Cidade (id)
 );
 
@@ -126,9 +126,9 @@ CREATE TABLE PagamentoAssinatura (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idAssinatura FOREIGN KEY (idAssinatura)
+    CONSTRAINT fk_idAssinatura_PagamentoAssinatura FOREIGN KEY (idAssinatura)
         REFERENCES Assinatura (id),
-    CONSTRAINT fk_idTipoPagamentoAssinatura FOREIGN KEY (idTipoPagamentoAssinatura)
+    CONSTRAINT fk_idTipoPagamentoAssinatura_PagamentoAssinatura FOREIGN KEY (idTipoPagamentoAssinatura)
         REFERENCES TipoPagamentoAssinatura (id)
 );
 
@@ -146,7 +146,7 @@ CREATE TABLE Cliente (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idContatoCliente FOREIGN KEY (idContatoCliente)
+    CONSTRAINT fk_idContatoCliente_Cliente FOREIGN KEY (idContatoCliente)
         REFERENCES ContatoCliente (id)
 );
 
@@ -155,9 +155,9 @@ CREATE TABLE MidiaCliente (
 	idCliente INT,
 	foto VARBINARY(MAX),
 	video VARBINARY(MAX),
-	CONSTRAINT fk_idCliente FOREIGN KEY (idCliente) 
+	CONSTRAINT fk_idCliente_MidiaCliente FOREIGN KEY (idCliente) 
 		REFERENCES Cliente (id)
-)
+);
 
 CREATE TABLE Evento ( 
     id INT PRIMARY KEY IDENTITY(1,1),
@@ -174,11 +174,11 @@ CREATE TABLE Evento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idCategoriaEvento FOREIGN KEY (idCategoriaEvento)
+    CONSTRAINT fk_idCategoriaEvento_Evento FOREIGN KEY (idCategoriaEvento)
         REFERENCES CategoriaEvento (id),
-    CONSTRAINT fk_idTipoEvento FOREIGN KEY (idTipoEvento)
+    CONSTRAINT fk_idTipoEvento_Evento FOREIGN KEY (idTipoEvento)
         REFERENCES TipoEvento (id), 
-    CONSTRAINT fk_idContatoEvento FOREIGN KEY (idContatoEvento)
+    CONSTRAINT fk_idContatoEvento_Evento FOREIGN KEY (idContatoEvento)
         REFERENCES ContatoEvento (id)
 );
 
@@ -191,7 +191,7 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEvento FOREIGN KEY (idEvento)
+    CONSTRAINT fk_idEvento_MidiaEvento FOREIGN KEY (idEvento)
         REFERENCES Evento (id)
  );
 
@@ -199,9 +199,9 @@ CREATE TABLE MidiaEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
     idCliente INT,
     idEvento INT NOT NULL,
-    CONSTRAINT fk_idCliente FOREIGN KEY (idCliente)
+    CONSTRAINT fk_idCliente_EventoClienteFavorito FOREIGN KEY (idCliente)
         REFERENCES Cliente (id),
-    CONSTRAINT fk_idEvento3 FOREIGN KEY (idEvento)
+    CONSTRAINT fk_idEvento_EventoClienteFavorito FOREIGN KEY (idEvento)
         REFERENCES Evento (id)
  ); 
  
@@ -219,7 +219,7 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEventoClienteFavorito FOREIGN KEY (idEventoClienteFavorito)
+    CONSTRAINT fk_idEventoClienteFavorito_CupomEvento FOREIGN KEY (idEventoClienteFavorito)
         REFERENCES EventoClienteFavorito (id) 
  );
 
@@ -238,15 +238,15 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idcontatoEstabeleciento FOREIGN KEY (idContatoEstabelecimento)
+    CONSTRAINT fk_idcontatoEstabeleciento_Estabelecimento FOREIGN KEY (idContatoEstabelecimento)
         REFERENCES ContatoEstabelecimento (id),
-    CONSTRAINT fk_idtipoEstabelecimento FOREIGN KEY (idTipoEstabelecimento)
+    CONSTRAINT fk_idtipoEstabelecimento_Estabelecimento FOREIGN KEY (idTipoEstabelecimento)
         REFERENCES TipoEstabelecimento (id),
-    CONSTRAINT fk_idEndereco FOREIGN KEY (idEndereco)
+    CONSTRAINT fk_idEndereco_Estabelecimento FOREIGN KEY (idEndereco)
         REFERENCES Endereco (id),
-    CONSTRAINT fk_idAssinatura FOREIGN KEY (idAssinatura)
+    CONSTRAINT fk_idAssinatura_Estabelecimento FOREIGN KEY (idAssinatura)
         REFERENCES Assinatura (id),
-    CONSTRAINT fk_idProprietario FOREIGN KEY (idProprietario)
+    CONSTRAINT fk_idProprietario_Estabelecimento FOREIGN KEY (idProprietario)
         REFERENCES Proprietario (id)
  );
 
@@ -254,9 +254,9 @@ CREATE TABLE MidiaEvento (
     id INT PRIMARY KEY IDENTITY(1,1), 
     idCliente INT,
     idEstabelecimento INT NOT NULL,
-    CONSTRAINT fk_idCliente2 FOREIGN KEY (idCliente)
+    CONSTRAINT fk_idCliente_ClienteEstabelecimentoInteresse FOREIGN KEY (idCliente)
         REFERENCES Cliente (id),
-    CONSTRAINT fk_idEstabelecimento3 FOREIGN KEY (idEstabelecimento)
+    CONSTRAINT fk_idEstabelecimento_ClienteEstabelecimentoInteresse FOREIGN KEY (idEstabelecimento)
         REFERENCES Estabelecimento (id)
  );
 
@@ -266,7 +266,7 @@ CREATE TABLE MidiaEvento (
     preco DECIMAL(7,2) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
     dataCadastro DATE NOT NULL,
-    CONSTRAINT fk_idClienteEstabelecimentoInteresse FOREIGN KEY (idClienteEstabelecimentoInteresse)
+    CONSTRAINT fk_idClienteEstabelecimentoInteresse_Entrada FOREIGN KEY (idClienteEstabelecimentoInteresse)
         REFERENCES ClienteEstabelecimentoInteresse (id)
  );
 
@@ -284,7 +284,7 @@ CREATE TABLE MidiaEvento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idClienteEstabelecimentoInteresse FOREIGN KEY (idClienteEstabelecimentoInteresse)
+    CONSTRAINT fk_idClienteEstabelecimentoInteresse_CupomEstabelecimento FOREIGN KEY (idClienteEstabelecimentoInteresse)
         REFERENCES ClienteEstabelecimentoInteresse (id)
  ); 
 
@@ -297,7 +297,7 @@ CREATE TABLE MidiaEstabelecimento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEstabelecimento2 FOREIGN KEY (idEstabelecimento)
+    CONSTRAINT fk_idEstabelecimento_MidiaEstabelecimento FOREIGN KEY (idEstabelecimento)
         REFERENCES Estabelecimento (id)
 ); 
 
@@ -311,7 +311,7 @@ CREATE TABLE Ingresso (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEventoClienteFavorito FOREIGN KEY (idEventoClienteFavorito)
+    CONSTRAINT fk_idEventoClienteFavorito_Ingresso FOREIGN KEY (idEventoClienteFavorito)
         REFERENCES EventoClienteFavorito (id)
 );
 
@@ -325,9 +325,9 @@ CREATE TABLE PagamentoIngresso (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idTipoPagamentoIngresso FOREIGN KEY (idTipoPagamentoIngresso)
+    CONSTRAINT fk_idTipoPagamentoIngresso_PagamentoIngresso FOREIGN KEY (idTipoPagamentoIngresso)
         REFERENCES TipoPagamentoIngresso (id),
-    CONSTRAINT fk_idIngresso FOREIGN KEY (idIngresso)
+    CONSTRAINT fk_idIngresso_PagamentoIngresso FOREIGN KEY (idIngresso)
         REFERENCES Ingresso (id)
 );
 
@@ -335,9 +335,9 @@ CREATE TABLE EventoEstabelecimento (
     id INT PRIMARY KEY IDENTITY(1,1),
     idEvento INT NOT NULL,
     idEstabelecimento INT NOT NULL,
-    CONSTRAINT fk_idEvento4 FOREIGN KEY (idEvento)
+    CONSTRAINT fk_idEvento_EventoEstabelecimento FOREIGN KEY (idEvento)
         REFERENCES Evento (id),
-    CONSTRAINT fk_idEstabelecimento3 FOREIGN KEY (idEstabelecimento)
+    CONSTRAINT fk_idEstabelecimento_EventoEstabelecimento FOREIGN KEY (idEstabelecimento)
         REFERENCES Estabelecimento (id)
 );
 
@@ -350,7 +350,7 @@ CREATE TABLE Avaliacao (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idEventoEstabelecimento FOREIGN KEY (idEventoEstabalecimento)
+    CONSTRAINT fk_idEventoEstabelecimento_Avaliacao FOREIGN KEY (idEventoEstabalecimento)
         REFERENCES EventoEstabelecimento (id)
 );
 
