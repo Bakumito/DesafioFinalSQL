@@ -139,7 +139,7 @@ CREATE TABLE Cliente (
     sobrenome VARCHAR(100),
     cpf CHAR(11) NOT NULL,
     dataNascimento DATE NOT NULL,
-    fotoPerfil VARBINARY(MAX),-----------------------------
+    fotoPerfil VARBINARY(MAX),
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(64) NOT NULL,
     idUsuarioCadastro INT NOT NULL,
@@ -207,7 +207,7 @@ CREATE TABLE MidiaEvento (
  
  CREATE TABLE CupomEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
-    idEventoClienteFavorito INT NOT NULL, -------------------------------------------------
+    idEventoClienteFavorito INT NOT NULL,
     dataValidade DATETIME NOT NULL, 
     hash VARCHAR(64) NOT NULL,
     status BIT NOT NULL,
@@ -272,7 +272,7 @@ CREATE TABLE MidiaEvento (
 
  CREATE TABLE CupomEstabelecimento ( 
     id INT PRIMARY KEY IDENTITY(1,1), 
-    idClienteEstabelecimentoInteresse INT NOT NULL, ----------------------------------
+    idClienteEstabelecimentoInteresse INT NOT NULL,
     dataValidade DATETIME NOT NULL,
     hash VARCHAR(64) NOT NULL,
     status BIT NOT NULL, 
