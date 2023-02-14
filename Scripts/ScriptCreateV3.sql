@@ -27,10 +27,6 @@ CREATE TABLE TipoEvento (
     descricao VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE CategoriaEvento ( 
-    id TINYINT PRIMARY KEY IDENTITY(1,1),
-    descricao VARCHAR(40) NOT NULL
-);
 
 CREATE TABLE Assinatura ( 
     id INT PRIMARY KEY IDENTITY(1,1),
