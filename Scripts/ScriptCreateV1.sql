@@ -1,6 +1,11 @@
 --CREATE DATABASE PlacesCompany;
 --USE DATABASE PlacesCompany; 
 
+CREATE TABLE TipoPagamentoIngresso ( 
+    id TINYINT PRIMARY KEY IDENTITY(1,1),
+    descricao VARCHAR(40) NOT NULL, 
+); 
+
 CREATE TABLE TipoPagamento (
     id TINYINT PRIMARY KEY IDENTITY(1,1),
     descricao VARCHAR(40) NOT NULL
@@ -64,7 +69,7 @@ CREATE TABLE Endereco (
         REFERENCES Cidade (id)
 );
 
-CREATE TABLE Usuario (
+CREATE TABLE Cliente (
     id INT PRIMARY KEY IDENTITY(1,1), 
     nome VARCHAR(50) NOT NULL,
     sobrenome VARCHAR(100),
@@ -252,3 +257,17 @@ CREATE TABLE MidiaEstabelecimento (
     CONSTRAINT fk_idEstabelecimento5 FOREIGN KEY (idEstabelecimento)
         REFERENCES Estabelecimento (id)
 );
+
+CREATE TABLE Ingresso ( 
+    id INT PRIMARY KEY IDENTITY(1,1),
+    idCliente INT NOT NULL, 
+    hash VARCHAR(64) NOT NULL,
+    valor DECIMAL NOT NULL,
+    quantidade TINYINT NOT NULL,
+    idUsuarioCadastro INT NOT NULL,
+    dataCadastro DATE NOT NULL,
+    idUsuarioUltimaAlteracao INT,
+    dataUltimaAlteracao DATE,
+    CONSTRAINT fk_idCliente FOREIGN KEY (idCliente)
+        REFERENCES Cliente (id)
+)
