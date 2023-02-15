@@ -26,3 +26,20 @@ Para um estabelecimento ou evento aparecer no aplicativo, é necessário ele se 
 A cada insert de avaliação de usuário, a média do estabelecimento/evento deve ser atualizada instantaneamente.
 Também seria interessante fazer alguma validação no banco de dados através de procedure que ao executar verifica se aquele cupom já venceu ou não, se ele já tiver vencido é esperado que seja mudado seu status para desativado caso não tenha sido utilizado.
 É necessário que uma procedure valide se aquele usuário pagou a mensalidade ou não, se caso ele estiver adimplente, o mesmo permanecerá com seu usuário ativo, se não, ele terá seu usuário desativado.
+
+## Cronograma de entregas
+>> Sprint Modelagem - Entrega 15/02
+- Analise da regra de negocio, identificando as entidades e atributos candidatos para a modelagem do sistema.
+- Criação da modelagem do sistema requisitado
+
+>> Sprint Banco de Dados Físico - Entrega 22/02
+- Criação dos scripts de create table.
+- Criação dos scripts de insert para popular o sistema com dados.
+- Criação de views Testes do banco de dados.
+- Revisão.
+
+>> Sprint Procedures e Triggers
+- Elaboração das procedures que serão utilizadas.
+- Elaboração dos triggers que serão utilizados.
+- Testes do banco de dados com a utilização das procs e triggers.
+- Revisão do código, pequenos ajustes, conclusão e entrega do projeto.
