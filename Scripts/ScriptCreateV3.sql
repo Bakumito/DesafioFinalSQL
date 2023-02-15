@@ -51,7 +51,7 @@ CREATE TABLE ContatoEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
     numero CHAR(11) NOT NULL,
     whatsapp BIT NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE
 );
 
@@ -59,7 +59,7 @@ CREATE TABLE ContatoCliente (
     id INT PRIMARY KEY IDENTITY(1,1),
     numero CHAR(11) NOT NULL,
     whatsapp BIT NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE
 );
 
@@ -72,7 +72,7 @@ CREATE TABLE Proprietario (
     fotoPerfil VARBINARY(MAX),
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(64) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE
 );
 
@@ -92,7 +92,7 @@ CREATE TABLE Endereco (
     logradouro VARCHAR(100) NOT NULL,
     numero VARCHAR(5) NOT NULL, 
     complemento VARCHAR(100),
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idCidade_Endereco FOREIGN KEY (idCidade)
         REFERENCES Cidade (id)
@@ -105,9 +105,9 @@ CREATE TABLE PagamentoAssinatura (
     dataVencimento DATE,
     dataPagamento DATE NOT NULL,
     comprovante BIT NOT NULL, 
-    valorPago DECIMAL(7,2) NOT NULL,
+    valorPago DECIMAL(7,2) NOT NULL DEFAULT (900.00),
     desconto DECIMAL(7,2),
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idAssinatura_PagamentoAssinatura FOREIGN KEY (idAssinatura)
         REFERENCES Assinatura (id),
@@ -125,7 +125,7 @@ CREATE TABLE Cliente (
     fotoPerfil VARBINARY(MAX),
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(64) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idContatoCliente_Cliente FOREIGN KEY (idContatoCliente)
         REFERENCES ContatoCliente (id)
@@ -150,7 +150,7 @@ CREATE TABLE Evento (
     dataFim DATETIME NOT NULL,
     capacidade INT NOT NULL,
     classificacaoEtaria VARCHAR(30) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idTipoEvento_Evento FOREIGN KEY (idTipoEvento)
         REFERENCES TipoEvento (id), 
@@ -163,7 +163,7 @@ CREATE TABLE MidiaEvento (
     idEvento INT NOT NULL,
     foto VARBINARY(MAX) NOT NULL, 
     video VARBINARY(MAX) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idEvento_MidiaEvento FOREIGN KEY (idEvento)
         REFERENCES Evento (id)
@@ -189,7 +189,7 @@ CREATE TABLE MidiaEvento (
     limite DECIMAL(4,2) NOT NULL,
     descricao VARCHAR(40) NOT NULL,
     regras VARCHAR(60) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idEventoClienteFavorito_CupomEvento FOREIGN KEY (idEventoClienteFavorito)
         REFERENCES EventoClienteFavorito (id) 
@@ -206,7 +206,7 @@ CREATE TABLE MidiaEvento (
     razaoSocial VARCHAR(100) NOT NULL,
     email VARCHAR(200) NOT NULL,
     cnpj VARCHAR(14) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idcontatoEstabeleciento_Estabelecimento FOREIGN KEY (idContatoEstabelecimento)
         REFERENCES ContatoEstabelecimento (id),
@@ -234,7 +234,7 @@ CREATE TABLE MidiaEvento (
     id INT PRIMARY KEY IDENTITY(1,1),
     idClienteEstabelecimentoInteresse INT NOT NULL,
     preco DECIMAL(7,2) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     CONSTRAINT fk_idClienteEstabelecimentoInteresse_Entrada FOREIGN KEY (idClienteEstabelecimentoInteresse)
         REFERENCES ClienteEstabelecimentoInteresse (id)
  );
@@ -249,7 +249,7 @@ CREATE TABLE MidiaEvento (
     limite DECIMAL(4,2), 
     descricao VARCHAR(40) NOT NULL,
     regras VARCHAR(60) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idClienteEstabelecimentoInteresse_CupomEstabelecimento FOREIGN KEY (idClienteEstabelecimentoInteresse)
         REFERENCES ClienteEstabelecimentoInteresse (id)
@@ -260,7 +260,7 @@ CREATE TABLE MidiaEstabelecimento (
     idEstabelecimento INT NOT NULL,
     foto VARBINARY(MAX) NOT NULL,
     video VARBINARY(MAX) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idEstabelecimento_MidiaEstabelecimento FOREIGN KEY (idEstabelecimento)
         REFERENCES Estabelecimento (id)
@@ -272,7 +272,7 @@ CREATE TABLE Ingresso (
     hash VARCHAR(64) NOT NULL,
     valor DECIMAL(7,2) NOT NULL,
     quantidade TINYINT NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idEventoClienteFavorito_Ingresso FOREIGN KEY (idEventoClienteFavorito)
         REFERENCES EventoClienteFavorito (id)
@@ -284,7 +284,7 @@ CREATE TABLE PagamentoIngresso (
     idIngresso INT NOT NULL,
     dataCompra DATETIME NOT NULL,
     total DECIMAL(7,2) NOT NULL, 
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idTipoPagamentoIngresso_PagamentoIngresso FOREIGN KEY (idTipoPagamentoIngresso)
         REFERENCES TipoPagamentoIngresso (id),
@@ -307,7 +307,7 @@ CREATE TABLE Avaliacao (
     idEventoEstabalecimento INT NOT NULL, 
     pontos DECIMAL(2,1) NOT NULL,
     comentario VARCHAR(300),
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
     CONSTRAINT fk_idEventoEstabelecimento_Avaliacao FOREIGN KEY (idEventoEstabalecimento)
         REFERENCES EventoEstabelecimento (id)
@@ -317,7 +317,7 @@ CREATE TABLE Usuario (
     id TINYINT PRIMARY KEY IDENTITY(1,1),
     login VARCHAR(60) NOT NULL,
     senha VARCHAR(64) NOT NULL,
-    dataCadastro DATE NOT NULL,
+    dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE
 );
 
