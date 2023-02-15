@@ -157,7 +157,6 @@ CREATE TABLE MidiaCliente (
 
 CREATE TABLE Evento ( 
     id INT PRIMARY KEY IDENTITY(1,1),
-    idCategoriaEvento TINYINT NOT NULL,
     idTipoEvento TINYINT NOT NULL,
     idContatoEvento INT NOT NULL,
     nome VARCHAR(100) NOT NULL,
@@ -170,8 +169,6 @@ CREATE TABLE Evento (
     dataCadastro DATE NOT NULL,
     idUsuarioUltimaAlteracao INT,
     dataUltimaAlteracao DATE,
-    CONSTRAINT fk_idCategoriaEvento_Evento FOREIGN KEY (idCategoriaEvento)
-        REFERENCES CategoriaEvento (id),
     CONSTRAINT fk_idTipoEvento_Evento FOREIGN KEY (idTipoEvento)
         REFERENCES TipoEvento (id), 
     CONSTRAINT fk_idContatoEvento_Evento FOREIGN KEY (idContatoEvento)
