@@ -105,7 +105,7 @@ CREATE TABLE PagamentoAssinatura (
     dataVencimento DATE,
     dataPagamento DATE NOT NULL,
     comprovante BIT NOT NULL, 
-    valorPago DECIMAL(7,2) NOT NULL DEFAULT (900.00),
+    valorPago DECIMAL(7,2) NOT NULL,
     desconto DECIMAL(7,2),
     dataCadastro DATE NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE,
