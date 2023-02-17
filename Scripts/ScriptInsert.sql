@@ -84,15 +84,20 @@ INSERT INTO TipoEvento VALUES
     ('Feijoada');
 
 INSERT INTO Assinatura VALUES 
-    ('2022-03-21', '2022-04-20', 1, 900.00, '2022-03-20', NULL),
-    ('2022-04-01', '2022-06-30', 1, 900.00, '2022-04-01', '2022-04-01'),
+    ('2022-03-21', '2022-04-20', 0, 900.00, '2022-03-20', NULL),
+    ('2022-04-01', NULL, 1, 900.00, '2022-04-01', '2022-04-01'),
     ('2022-05-11', '2022-05-30', 0, 900.00, '2022-05-10', NULL),
-    ('2022-06-01', '2022-08-31', 1, 900.00, '2022-05-31', NULL),
-    ('2022-07-12', '2022-08-11', 1, 900.00, '2022-07-11', '2022-07-12'),
-    ('2022-08-01', '2022-09-30', 1, 900.00, '2022-07-31', NULL),
-    ('2022-09-21', '2022-11-20', 1, 900.00, '2022-09-20', '2022-09-21'),
-    ('2022-10-01', '2022-12-31', 1, 900.00, '2022-09-30', NULL),
+    ('2022-06-01', NULL, 1, 900.00, '2022-05-31', NULL),
+    ('2022-07-12', '2022-08-11', 0, 900.00, '2022-07-11', '2022-07-12'),
+    ('2022-08-01', NULL, 1, 900.00, '2022-07-31', NULL),
+    ('2022-09-21', '2022-11-20', 0, 900.00, '2022-09-20', '2022-09-21'),
+    ('2022-10-01', NULL, 0, 900.00, '2022-09-30', NULL),
+    ('2022-11-11', '2022-11-30', 0, 900.00, '2022-11-10', NULL),
+    ('2022-08-01', NULL, 1, 900.00, '2022-07-31', NULL),
+    ('2022-09-21', '2022-11-20', 0, 900.00, '2022-09-20', '2022-09-21'),
+    ('2022-10-01', NULL, 1, 900.00, '2022-09-30', NULL),
     ('2022-11-11', '2022-11-30', 0, 900.00, '2022-11-10', NULL);
+
 
 INSERT INTO ContatoEstabelecimento VALUES 
     ('11987654321', 1, '2022-03-01', NULL),
@@ -167,18 +172,18 @@ INSERT INTO Proprietario VALUES
     ('Ana', 'Lima', '45678901234', '1995-04-04', NULL, 'ana.lima@gmail.com', '012345', '2022-01-04', NULL),
     ('José', 'Ferreira', '56789012345', '2000-05-05', NULL, 'jose.ferreira@gmail.com', '678901', GETDATE(), '2022-02-02'),
     ('Carla', 'Oliveira', '67890123456', '2005-06-06', NULL, 'carla.oliveira@hotmail.com', '234567', '2022-01-06', NULL),
-    ('Fernando', 'Santos', '78901234567', '2010-07-07', NULL, 'fernando.santos@gmail.com', '890123', GETDATE(), '2022-02-03'),
-    ('Aline', 'Martins', '89012345678', '2015-08-08', NULL, 'aline.martins@yahoo.com', '456789', '2022-01-08', NULL),
-    ('Rafael', 'Rodrigues', '90123456789', '2020-09-09', NULL, 'rafael.rodrigues@gmail.com', '123456', GETDATE(), '2022-02-04'),
+    ('Fernando', 'Santos', '78901234567', '1997-07-07', NULL, 'fernando.santos@gmail.com', '890123', GETDATE(), '2022-02-03'),
+    ('Aline', 'Martins', '89012345678', '1976-08-08', NULL, 'aline.martins@yahoo.com', '456789', '2022-01-08', NULL),
+    ('Rafael', 'Rodrigues', '90123456789', '1990-09-09', NULL, 'rafael.rodrigues@gmail.com', '123456', GETDATE(), '2022-02-04'),
     ('Sandra', 'Pereira', '01234567890', '1982-10-10', NULL, 'sandra.pereira@hotmail.com', '789012', '2022-01-10', NULL),
     ('Juliana', 'Nascimento', '32165498732', '1987-11-11', NULL, 'juliana.nascimento@gmail.com', '234567', '2022-01-11', '2022-01-11'),
     ('Vitor', 'Gomes', '14725836901', '1992-12-12', NULL, 'vitor.gomes@yahoo.com', '678901', '2022-01-12', NULL),
     ('Mariana', 'Barbosa', '25836914702', '1997-01-13', NULL, 'mariana.barbosa@gmail.com', '123456', '2022-01-13', '2022-01-13'),
     ('Lucas', 'Mendes', '36914725803', '2002-02-14', NULL, 'lucas.mendes@hotmail.com', '456789', '2022-01-14', NULL),
     ('Paulo', 'Araujo', '45612378904', '2002-02-15', NULL, 'paulo.araujo@gmail.com', '2837101', GETDATE(), NULL),
-    ('Gabriela', 'Gonçalves', '98765432106', '2010-03-16', NULL, 'gabriela.goncalves@hotmail.com', '890123', '2022-01-16', '2022-01-16'),
-    ('Roberto', 'Xavier', '87654321017', '2015-04-17', NULL, 'roberto.xavier@gmail.com', '234567', '2022-01-17', NULL),
-    ('Luciana', 'Fernandes', '76543210928', '2020-05-18', NULL, 'luciana.fernandes@yahoo.com', '789012', '2022-01-18', '2022-01-18');
+    ('Gabriela', 'Gonçalves', '98765432106', '1992-03-16', NULL, 'gabriela.goncalves@hotmail.com', '890123', '2022-01-16', '2022-01-16'),
+    ('Roberto', 'Xavier', '87654321017', '1980-04-17', NULL, 'roberto.xavier@gmail.com', '234567', '2022-01-17', NULL),
+    ('Luciana', 'Fernandes', '76543210928', '1993-05-18', NULL, 'luciana.fernandes@yahoo.com', '789012', '2022-01-18', '2022-01-18');
 
 INSERT INTO Cidade VALUES
     (1, 'Rio Branco'),
@@ -237,88 +242,83 @@ INSERT INTO Cidade VALUES
     (27, 'Gurupi');
 
 INSERT INTO Endereco  VALUES
-    (1, '69900-000', 'Centro', 'Avenida Brasil', '123', 'Sala 101', '2023-02-15', NULL),
-    (2, '69980-000', 'Floresta', 'Rua dos Ipês', '456', NULL, GETDATE(), NULL),
-    (3, '68900-000', 'Zerão', 'Avenida FAB', '789', NULL, '2023-02-15', NULL),
-    (4, '68980-000', 'Jardim América', 'Rua da Felicidade', '101', 'Casa 2', GETDATE(), NULL),
-    (5, '40000-000', 'Barra', 'Avenida Oceânica', '1111', NULL, '2023-02-15', NULL),
+    (1, '69900-000', 'Centro', 'Avenida Brasil', '123A', 'Sala 101', '2023-02-15', NULL),
+    (2, '69980-000', 'Floresta', 'Rua dos Ipês', '456C', NULL, GETDATE(), NULL),
+    (3, '68900-000', 'Zerão', 'Avenida FAB', '789B', NULL, '2023-02-15', NULL),
+    (4, '68980-000', 'Jardim América', 'Rua da Felicidade', '101A', 'Casa 2', GETDATE(), NULL),
+    (5, '40000-000', 'Barra', 'Avenida Oceânica', '1111E', NULL, '2023-02-15', NULL),
     (6, '40300-000', 'Engenheiro Luciano Cavalcante', 'Rua Desembargador Lauro Nogueira', '222', NULL, '2023-02-15', NULL),
     (7, '72210-000', 'Guará II', 'QE 38', '10', NULL, '2023-02-15', NULL),
     (8, '29000-000', 'Centro', 'Rua Sete de Setembro', '200', 'Sala 301', '2023-02-15', NULL),
     (9, '74000-000', 'Setor Oeste', 'Rua 15', '500', NULL, '2023-02-15', NULL),
-    (10, '65000-000', 'Cohama', 'Avenida Daniel de La Touche', '1000', 'Sala 502', GETDATE(), NULL),
-    (11, '78000-000', 'Centro Sul', 'Rua Barão de Melgaço', '800', NULL, '2023-02-15', NULL),
-    (12, '79000-000', 'Centro', 'Rua 14 de Julho', '123', NULL, '2023-02-15', NULL),
-    (13, '30000-000', 'Serra', 'Rua Dona Sofia', '700', 'Casa 1', '2023-02-15', NULL),
+    (10, '65000-000', 'Cohama', 'Avenida Daniel de La Touche', '1000C', 'Sala 502', GETDATE(), NULL),
+    (11, '78000-000', 'Centro Sul', 'Rua Barão de Melgaço', '800D', NULL, '2023-02-15', NULL),
+    (12, '79000-000', 'Centro', 'Rua 14 de Julho', '123C', NULL, '2023-02-15', NULL),
+    (13, '30000-000', 'Serra', 'Rua Dona Sofia', '700D', 'Casa 1', '2023-02-15', NULL),
     (14, '66000-000', 'Umarizal', 'Rua dos Mundurucus', '1000', NULL, '2023-02-15', NULL),
     (15, '58000-000', 'Brisamar', 'Avenida Senador Ruy Carneiro', '900', 'Sala 202', '2023-02-15', NULL),
     (16, '80000-000', 'Centro', 'Rua XV de Novembro', '1234', NULL, '2023-02-15', NULL),
     (17, '51000-000', 'Boa Viagem', 'Rua Setúbal', '500', NULL, '2023-02-15', NULL),
     (18, '64000-000', 'Centro', 'Avenida Frei Serafim', '1000', NULL, GETDATE(), NULL),
     (19, '20921-060', 'Engenho Novo', 'Rua Cândido Benício', '407', 'Bloco B, Apto 203', '2023-02-16', NULL),
-    (20, '59072-710', 'Capim Macio', 'Rua Afonso Bezerra', '1', 'Sala 102', '2023-02-16', NULL),
+    (20, '59072-710', 'Capim Macio', 'Rua Afonso Bezerra', '12', 'Sala 102', '2023-02-16', NULL),
     (21, '90520-000', 'Moinhos de Vento', 'Rua Quintino Bocaiúva', '558', 'Sala 2001', GETDATE(), NULL);
 
 INSERT INTO PagamentoAssinatura VALUES
 
     (1, 1, '2022-03-21', '2022-03-20', 0, 900.00, NULL, GETDATE(), NULL),
+    (1, 1, '2022-04-21', '2022-04-20', 0, 900.00, NULL, GETDATE(), NULL),
+    (1, 1, '2022-05-21', '2022-05-20', 0, 900.00, NULL, GETDATE(), NULL),
     (2, 1, '2022-04-01', '2022-04-01', 1, 900.00, 0, GETDATE(), '2022-04-01'),
+    (2, 1, '2022-05-01', '2022-05-01', 1, 900.00, 0, GETDATE(), '2022-05-01'),
+    (2, 1, '2022-06-01', '2022-06-01', 1, 900.00, 0, GETDATE(), '2022-06-01'),
     (3, 4, '2022-05-11', '2022-05-10', 0, 900.00, NULL, GETDATE(), NULL),
-    (4, 1, '2022-06-01', '2022-05-31', 0, 900.00, NULL, GETDATE(), NULL),
+    (3, 4, '2022-06-11', '2022-06-10', 0, 900.00, NULL, GETDATE(), NULL),
+    (3, 4, '2022-07-11', '2022-07-10', 0, 900.00, NULL, GETDATE(), NULL),
+    (4, 1, '2023-02-20', '2023-02-20', 1, 900.00, NULL, GETDATE(), NULL),
     (5, 1, '2022-07-12', '2022-07-11', 1, 900.00, 0, GETDATE(), '2022-07-12'),
-    (6, 2, '2022-08-01', '2022-07-31', 0, 900.00, NULL, GETDATE(), NULL),
+    (6, 2, '2022-08-01', '2022-08-31', 0, 900.00, NULL, GETDATE(), NULL),
+    (6, 2, '2022-09-01', '2022-09-31', 0, 900.00, NULL, GETDATE(), NULL),
+    (6, 2, '2022-10-01', '2022-10-31', 0, 900.00, NULL, GETDATE(), NULL),
     (7, 1, '2022-09-21', '2022-09-20', 1, 900.00, 0, GETDATE(), '2022-09-21'),
-    (8, 3, '2022-10-01', '2022-09-30', 0, 900.00, NULL, GETDATE(), NULL),
+    (8, 3, '2022-11-01', '2022-11-30', 0, 900.00, NULL, GETDATE(), NULL),
+    (8, 3, '2022-12-01', '2022-12-30', 0, 900.00, NULL, GETDATE(), NULL),
+    (9, 4, '2023-03-01', '2023-01-03', 0, 900.00, NULL, GETDATE(), NULL),
     (9, 4, '2022-11-11', '2022-11-10', 0, 900.00, NULL, GETDATE(), NULL);
 
-INSERT INTO CLiente VALUES 
+INSERT INTO Cliente VALUES 
     (1, 'João', 'Silva', '12345678901', '1990-01-01', NULL, 'joao.silva@email.com', '123456', '2022-02-15', NULL),
     (2, 'Maria', 'Souza', '23456789012', '1995-02-01', NULL, 'maria.souza@email.com', 'abcdef', '2022-02-15', NULL),
     (3, 'Pedro', 'Oliveira', '34567890123', '1992-03-15', NULL, 'pedro.oliveira@email.com', 'ghijkl', '2022-02-15', '2022-02-15'),
     (4, 'Lucas', 'Santos', '45678901234', '1988-04-20', NULL, 'lucas.santos@email.com', 'mnopqr', '2022-02-15', NULL),
-    (5, 'Ana', 'Lima', '56789012345', '1998-05-25', NULL, 'ana.lima@email.com', 'stuvwx', '2022-02-15', '2022-02-15');
-    (6, 'Mary', 'Brown', '67890123456', '1988-11-10', NULL, 'marybrown@example.com', 'mypassword', NULL),
-    (7, 'Mike', 'Davis', '78901234567', '1982-08-05', NULL, 'mikedavis@example.com', 'mypassword', '2022-02-03'),
-    (8, 'Sarah', 'Lee', '89012345678', '1995-02-28', NULL, 'sarahlee@example.com', 'mypassword', NULL),
-    (9, 'David', 'Nguyen', '90123456789', '1989-10-18', NULL, 'davidnguyen@example.com', 'mypassword', '2022-02-04'),
-    (10, 'Lisa', 'Garcia', '01234567890', '1990-07-02', NULL, 'lisagarcia@example.com', 'mypassword', NULL),
-    (11, 'Chris', 'Martinez', '32165498732', '1992-11-23', NULL, 'chrismartinez@example.com', 'mypassword', '2022-01-11'),
-    (12, 'Karen', 'Chen', '14725836901', '1985-06-30', NULL, 'karenchen@example.com', 'mypassword', NULL),
-    (13, 'Anthony', 'Lopez', '25836914702', '1978-09-03', NULL, 'anthonylopez@example.com', 'mypassword', '2022-01-13'),
-    (14, 'Jessica', 'Taylor', '36914725803', '1997-01-20', NULL, 'jessicataylor@example.com', 'mypassword', NULL),
-    (15, 'Mark', 'Anderson', '45612378904', '1984-04-07', NULL, 'markanderson@example.com', 'mypassword', '2022-02-05'),
-    (16, 'Nicole', 'Brown', '45678912305', '1995-08-14', NULL, 'nicolebrown@example.com', 'mypassword', NULL),
-    (17, 'Brian', 'Wilson', '78901245606', '1981-02-17', NULL, 'brianwilson@example.com', 'mypassword', '2022-02-06'),
-    (18, 'Grace', 'Lee', '12378945607', '1993-12-08', NULL, 'gracelee@example.com', 'mypassword', NULL),
-    (19, 'Eric', 'Wong', '65498712308', '1987-07-29', NULL, 'ericwong@example.com', 'mypassword', '2022-02-07'),
-    (20, 'Amanda', 'Lin', '95162387409', '1998-11-12', NULL, 'amandalin@example.com', 'mypassword', NULL);
+    (5, 'Ana', 'Lima', '56789012345', '1998-05-25', NULL, 'ana.lima@email.com', 'stuvwx', '2022-02-15', '2022-02-15'),
+    (6, 'Mary', 'Brown', '67890123456', '1988-11-10', NULL, 'marybrown@example.com', 'mypassword', '2022-02-15',  NULL),
+    (7, 'Mike', 'Davis', '78901234567', '1982-08-05', NULL, 'mikedavis@example.com', 'mypassword', '2022-02-15', NULL),
+    (8, 'Sarah', 'Lee', '89012345678', '1995-02-28', NULL, 'sarahlee@example.com', 'mypassword', '2022-02-15', NULL),
+    (9, 'David', 'Nguyen', '90123456789', '1989-10-18', NULL, 'davidnguyen@example.com', 'mypassword', '2022-02-15', NULL),
+    (10, 'Lisa', 'Garcia', '01234567890', '1990-07-02', NULL, 'lisagarcia@example.com', 'mypassword', '2022-02-15', NULL),
+    (11, 'Chris', 'Martinez', '32165498732', '1992-11-23', NULL, 'chrismartinez@example.com', 'mypassword', '2022-01-15', NULL),
+    (12, 'Karen', 'Chen', '14725836901', '1985-06-30', NULL, 'karenchen@example.com', 'mypassword', '2022-02-15', NULL),
+    (13, 'Anthony', 'Lopez', '25836914702', '1978-09-03', NULL, 'anthonylopez@example.com', 'mypassword', '2022-01-15', NULL),
+    (14, 'Jessica', 'Taylor', '36914725803', '1997-01-20', NULL, 'jessicataylor@example.com', 'mypassword', '2022-02-15', NULL),
+    (15, 'Mark', 'Anderson', '45612378904', '1984-04-07', NULL, 'markanderson@example.com', 'mypassword', '2022-02-15', '2022-02-20'),
+    (16, 'Nicole', 'Brown', '45678912305', '1995-08-14', NULL, 'nicolebrown@example.com', 'mypassword', '2022-02-15', NULL),
+    (17, 'Brian', 'Wilson', '78901245606', '1981-02-17', NULL, 'brianwilson@example.com', 'mypassword', '2022-02-15', '2022-02-15'),
+    (18, 'Grace', 'Lee', '12378945607', '1993-12-08', NULL, 'gracelee@example.com', 'mypassword', '2022-02-15', NULL),
+    (19, 'Eric', 'Wong', '65498712308', '1987-07-29', NULL, 'ericwong@example.com', 'mypassword', '2022-02-15', NULL),
+    (20, 'Amanda', 'Lin', '95162387409', '1998-11-12', NULL, 'amandalin@example.com', 'mypassword', '2022-02-15', NULL);
+
 
 INSERT INTO MidiaCliente VALUES
-    (1, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB),
-    SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), 
-    (2, 0x89504e470d0a1a0a, NULL)), 
-    (5, NULL, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (7, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB),
-     NULL),
-    (9, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB),
-    SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (13, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (16, NULL, 
-    SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (18, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), 
-    SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (20, SELECT *
-    FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL);
+    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB))), 
+    (2, 0x89504e470d0a1a0a, NULL), 
+    (5, NULL, 0x89504e470d0a1a0a),
+    (7, 0x89504e470d0a1a0a, NULL),
+    (9, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a),
+    (13, 0x89504e470d0a1a0a, NULL),
+    (16, NULL, 0x89504e470d0a1a0a),
+    (18, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a),
+    (20, 0x89504e470d0a1a0a, NULL);
 
 INSERT INTO Evento VALUES
     (1, 1, 'Concerto de Rock', 'Concerto da banda de rock X', '2023-05-15 20:00:00', '2023-05-15 23:00:00', 1000, '18+', '2023-02-15', NULL),
@@ -342,62 +342,39 @@ INSERT INTO Evento VALUES
     (5, 5, 'Feira de Artesanato', 'Exposição de artesanatos regionais', '2023-06-05 10:00:00', '2023-06-05 18:00:00', 500, 'Livre', '2023-02-16', '2023-02-18');
 
 INSERT INTO MidiaEvento VALUES 
-    (1, SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (2, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video1.mp4', SINGLE_BLOB)),
-    (3, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\image2.jpg', SINGLE_BLOB),
-        SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (4, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\image2.jpg', SINGLE_BLOB), NULL),
-    (5, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video3.mp4', SINGLE_BLOB)),
-    (6, SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (7, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video3.mp4', SINGLE_BLOB)),
-    (8, SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (9, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video3.mp4', SINGLE_BLOB)),
-    (10, SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (11, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video3.mp4', SINGLE_BLOB)),
-    (12, SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB), NULL),
-    (13, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video1.mp4', SINGLE_BLOB)),
-    (14, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\image2.jpg', SINGLE_BLOB),
-        SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (15, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video1.mp4', SINGLE_BLOB)),
-    (16, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\image2.jpg', SINGLE_BLOB),
-        SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (17, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video1.mp4', SINGLE_BLOB)),
-    (18, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\image2.jpg', SINGLE_BLOB),
-        SELECT *
-        FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)),
-    (, NULL, SELECT *
-        FROM OPENROWSET(BULK 'C:\path\to\video3.mp4', SINGLE_BLOB)),
+    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)), ((SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)), GETDATE(), NULL)),
+    (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (3, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (4, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (5, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (6, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (7, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (8, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (9, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (10, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (11, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (12, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (13, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (14, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (15, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (16, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (17, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (18, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (19, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL);
 
 INSERT INTO EventoClienteFavorito VALUES
     (1, 1),
     (2, 1),
     (3, 2),
+    (3, 6),
     (4, 2),
     (5, 3),
+    (4, 1),
+    (4, 2),
     (4, 3),
     (5, 2), 
     (7, 2),
+    (7, 3),
     (8, 3),
     (9, 3),
     (10, 2),
@@ -405,18 +382,18 @@ INSERT INTO EventoClienteFavorito VALUES
     (12, 4);
 
 INSERT INTO CupomEvento VALUES
-    (1, '2023-06-30 23:59:59', 'a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20', 1, 1.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos selecionados', '2023-02-15', NULL),
-    (2, '2023-05-31 23:59:59', 'o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14', 1, 2.5, 100, 'Cupom de desconto de 100%', 'Válido apenas para a primeira compra', '2023-02-15', NULL),
-    (3, '2023-09-30 23:59:59', 'g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6', 1, 3.0, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$100,00', '2023-02-15', NULL),
-    (4, '2023-12-31 23:59:59', 'q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16', 1, 1.0, 20, 'Cupom de desconto de 20%', 'Válido apenas para a categoria de roupas', '2023-02-15', NULL),
-    (5, '2024-02-28 23:59:59', 'm13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12', 1, 4.5, 200, 'Cupom de desconto de 200%', 'Válido apenas para compras acima de R$300,00', '2023-02-15', NULL),
-    (6, '2023-07-31 23:59:59', 'c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2', 1, 2.0, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em promoção', '2023-02-15', NULL),
-    (7, '2023-08-31 23:59:59', 'p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15', 1, 2.5, 100, 'Cupom de desconto de 100%', 'Válido apenas para compras acima de R$200,00', '2023-02-15', NULL),
-    (8, '2023-11-30 23:59:59', 'l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11', 1, 3.5, 150, 'Cupom de desconto de 150%', 'Válido apenas para produtos em lançamento', '2023-02-15', NULL),
-    (9, '2023-10-31 23:59:59', 'f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5', 1, 1.0, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em estoque limitado', '2023-02-15', NULL),
-    (10, '2024-01-31 23:59:59', 't20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19', 1, 5.0, 250, 'Cupom de desconto de 250%', 'Válido apenas para compras acima de R$400,00', '2023-02-15', NULL),
-    (11, '2023-09-15 23:59:59', 'e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4', 1, 2.0, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$150,00', '2023-02-15', NULL),
-    (12, '2023-11-15 23:59:59', 'r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17', 1, 4.0, 200, 'Cupom de desconto de 200%', 'Válido apenas para compras acima de R$300,00', '2023-02-15', NULL);
+    (1, '2023-06-30 23:59:59', 'a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20', 1, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos selecionados', '2023-02-15', NULL),
+    (2, '2023-05-31 23:59:59', 'o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14', 1, 1.0, 10, 'Cupom de desconto de 100%', 'Válido apenas para a primeira compra', '2023-02-15', NULL),
+    (3, '2022-09-30 23:59:59', 'g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6', 0, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$100,00', '2022-02-15', NULL),
+    (4, '2023-12-31 23:59:59', 'q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para a categoria de roupas', '2023-02-15', NULL),
+    (5, '2024-02-28 23:59:59', 'm13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$300,00', '2023-02-15', NULL),
+    (6, '2021-07-31 23:59:59', 'c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em promoção', '2021-02-15', NULL),
+    (7, '2023-08-31 23:59:59', 'p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$200,00', '2023-02-15', NULL),
+    (8, '2023-11-30 23:59:59', 'l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11', 1, 0.1, 15, 'Cupom de desconto de 15%', 'Válido apenas para produtos em lançamento', '2023-02-15', NULL),
+    (9, '2022-10-31 23:59:59', 'f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em estoque limitado', '2022-02-15', NULL),
+    (10, '2024-01-31 23:59:59', 't20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19', 1, 0.2, 25, 'Cupom de desconto de 25%', 'Válido apenas para compras acima de R$400,00', '2023-02-15', NULL),
+    (11, '2023-09-15 23:59:59', 'e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4', 1, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$150,00', '2023-02-15', NULL),
+    (12, '2023-11-15 23:59:59', 'r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para compras acima de R$300,00', '2023-02-15', NULL);
 
 INSERT INTO Estabelecimento VALUES 
     (1, 1, 1, 1, 1, 'Loja 1', 'Loja 1 LTDA', 'loja1@gmail.com', '12345678901234', '2023-02-15', NULL),
@@ -482,17 +459,109 @@ INSERT INTO Entrada VALUES
     (5, 10.75, '2023-02-15');
 
 INSERT INTO CupomEstabelecimento VALUES
-  (1, '2023-03-01 00:00:00', '1a2b3c4d', 1, 10.0, NULL, 'Cupom de desconto', 'Desconto de 10% em qualquer compra', '2023-02-15', NULL),
-  (2, '2023-03-15 00:00:00', '5e6f7g8h', 1, 5.0, 50.0, 'Cupom de aniversário', 'Desconto de R$5 em compras acima de R$50', '2023-02-15', NULL),
-  (3, '2023-03-31 00:00:00', '9i0j1k2l', 0, 20.0, NULL, 'Cupom de fidelidade', 'Desconto de 20% para clientes frequentes', '2023-02-15', NULL),
-  (4, '2023-04-01 00:00:00', '3m4n5o6p', 1, 15.0, NULL, 'Cupom de lançamento', 'Desconto de 15% em novos produtos', '2023-02-15', NULL),
-  (5, '2023-04-15 00:00:00', '7q8r9s0t', 1, 7.5, 30.0, 'Cupom de Páscoa', 'Desconto de R$7,50 em compras acima de R$30', '2023-02-15', NULL),
-  (1, '2023-05-01 00:00:00', 'a1b2c3d4', 1, 5.0, 50.0, 'Cupom de desconto', 'Desconto de R$5 em compras acima de R$50', '2023-02-15', NULL),
-  (2, '2023-05-15 00:00:00', 'e5f6g7h8', 1, 20.0, NULL, 'Cupom de aniversário', 'Desconto de 20% em qualquer compra', '2023-02-15', NULL),
-  (3, '2023-05-31 00:00:00', 'i9j0k1l2', 0, 25.0, NULL, 'Cupom de fidelidade', 'Desconto de 25% para clientes frequentes', '2023-02-15', NULL),
-  (4, '2023-06-01 00:00:00', 'm3n4o5p6', 1, 10.0, 100.0, 'Cupom de lançamento', 'Desconto de R$10 em compras acima de R$100', '2023-02-15', NULL),
-  (5, '2023-06-15 00:00:00', 'q7r8s9t0', 1, 5.0, NULL, 'Cupom de dia dos namorados', 'Desconto de R$5 em qualquer compra', '2023-02-15', NULL),
-  (1, '2023-07-01 00:00:00', 'a2b3c4d5', 0, 15.0, NULL, 'Cupom de inverno', 'Desconto de 15% em produtos de inverno', '2023-02-15', NULL),
-  (2, '2023-07-15 00:00:00', 'e6f7g8h9', 1, 7.0, 30.0, 'Cupom de aniversário', 'Desconto de R$7 em compras acima de R$30', '2023-02-15', NULL),
-  (3, '2023-07-31 00:00:00', 'i0j1k2l3', 1, 10.0, NULL, 'Cupom de fidelidade', 'Desconto de R$10 em qualquer compra', '2023-02-15', NULL),
-  (4, '2023-08-01 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', '2023-02-15', NULL),
+    (1, '2023-03-01 00:00:00', '1a2b3c4d', 1, 10.0, NULL, 'Cupom de desconto', 'Desconto de 10% em qualquer compra', '2023-02-15', NULL),
+    (2, '2023-03-15 00:00:00', '5e6f7g8h', 1, 5.0, 50.0, 'Cupom de aniversário', 'Desconto de R$5 em compras acima de R$50', '2023-02-15', NULL),
+    (3, '2023-03-31 00:00:00', '9i0j1k2l', 0, 20.0, NULL, 'Cupom de fidelidade', 'Desconto de 20% para clientes frequentes', '2023-02-15', NULL),
+    (4, '2023-04-01 00:00:00', '3m4n5o6p', 1, 15.0, NULL, 'Cupom de lançamento', 'Desconto de 15% em novos produtos', '2023-02-15', NULL),
+    (5, '2023-04-15 00:00:00', '7q8r9s0t', 1, 7.5, 30.0, 'Cupom de Páscoa', 'Desconto de R$7,50 em compras acima de R$30', '2023-02-15', NULL),
+    (1, '2023-05-01 00:00:00', 'a1b2c3d4', 1, 5.0, 50.0, 'Cupom de desconto', 'Desconto de R$5 em compras acima de R$50', '2023-02-15', NULL),
+    (2, '2023-05-15 00:00:00', 'e5f6g7h8', 1, 20.0, NULL, 'Cupom de aniversário', 'Desconto de 20% em qualquer compra', '2023-02-15', NULL),
+    (3, '2023-05-31 00:00:00', 'i9j0k1l2', 0, 25.0, NULL, 'Cupom de fidelidade', 'Desconto de 25% para clientes frequentes', '2023-02-15', NULL),
+    (4, '2023-06-01 00:00:00', 'm3n4o5p6', 1, 10.0, 100.0, 'Cupom de lançamento', 'Desconto de R$10 em compras acima de R$100', '2023-02-15', NULL),
+    (5, '2023-06-15 00:00:00', 'q7r8s9t0', 1, 5.0, NULL, 'Cupom de dia dos namorados', 'Desconto de R$5 em qualquer compra', '2023-02-15', NULL),
+    (1, '2023-07-01 00:00:00', 'a2b3c4d5', 0, 15.0, NULL, 'Cupom de inverno', 'Desconto de 15% em produtos de inverno', '2023-02-15', NULL),
+    (2, '2023-07-15 00:00:00', 'e6f7g8h9', 1, 7.0, 30.0, 'Cupom de aniversário', 'Desconto de R$7 em compras acima de R$30', '2023-02-15', NULL),
+    (3, '2023-07-31 00:00:00', 'i0j1k2l3', 1, 10.0, NULL, 'Cupom de fidelidade', 'Desconto de R$10 em qualquer compra', '2023-02-15', NULL),
+    (4, '2023-08-01 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', '2023-02-15', NULL);
+
+INSERT INTO MidiaEstabelecimento VALUES 
+	(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)), ((SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB)), GETDATE(), NULL)),
+    (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (3, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (4, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (5, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (6, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (7, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (8, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (9, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (10, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (11, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (12, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (13, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (14, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (15, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (16, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (17, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (18, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (19, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL);
+
+INSERT INTO Ingresso VALUES
+    (1, '1a2b3c4d', 20.0, 2, '2023-02-15', NULL),
+    (2, '5e6f7g8h', 10.0, 1, '2023-02-15', NULL),
+    (3, '9i0j1k2l', 15.0, 2, '2023-02-15', NULL),
+    (4, '3m4n5o6p', 25.0, 1, '2023-02-15', NULL),
+    (5, '7q8r9s0t', 30.0, 2, '2023-02-15', NULL),
+    (4, '1u2v3w4x', 40.0, 1, '2023-02-15', NULL),
+    (5, '5y6z7a8b', 50.0, 2, '2023-02-15', NULL),
+    (7, '9c0d1e2f', 15.0, 1, '2023-02-15', NULL),
+    (8, '3g4h5i6j', 20.0, 2, '2023-02-15', NULL),
+    (9, '7k8l9m0n', 10.0, 1, '2023-02-15', NULL),
+    (10, '1o2p3q4r', 25.0, 2, '2023-02-15', NULL),
+    (11, '5s6t7u8v', 30.0, 1, '2023-02-15', NULL),
+    (12, '9w0x1y2z', 35.0, 2, '2023-02-15', NULL);
+
+INSERT INTO PagamentoIngresso VALUES
+    (1, 1, '2023-02-15 10:30:00', 100.00, GETDATE(), NULL),
+    (2, 2, '2023-02-14 15:45:00', 50.00, GETDATE(), NULL),
+    (3, 3, '2023-02-13 12:00:00', 75.00, GETDATE(), NULL),
+    (1, 4, '2023-02-12 18:30:00', 150.00, GETDATE(), NULL),
+    (2, 5, '2023-02-11 10:00:00', 200.00, GETDATE(), NULL),
+    (1, 1, '2022-03-01 10:00:00', 100.00, GETDATE(), NULL),
+    (2, 2, '2022-03-02 11:00:00', 120.00, GETDATE(), NULL),
+    (3, 3, '2022-03-03 12:00:00', 80.00, GETDATE(), NULL),
+    (1, 4, '2022-03-04 13:00:00', 150.00, GETDATE(), NULL),
+    (2, 5, '2022-03-05 14:00:00', 200.00, GETDATE(), NULL);
+
+INSERT INTO EventoEstabelecimento VALUES 
+    (1, 1),
+    (1, 2),
+    (2, 3),
+    (2, 4),
+    (3, 5),
+    (3, 6),
+    (4, 7),
+    (4, 8),
+    (5, 9),
+    (5, 10);
+
+INSERT INTO Avaliacao VALUES
+    (1, 4.5, 'Gostei bastante do evento, organização impecável!', '2022-12-01', '2022-12-01'),
+    (2, 3.2, 'Poderia ter mais atrações, mas gostei do ambiente.', '2022-12-01', '2022-12-01'),
+    (3, 5.0, 'Melhor evento que já fui, recomendo!', '2022-12-02', NULL),
+    (4, 2.1, 'Falta de organização e segurança, não recomendo.', '2022-12-02', NULL),
+    (5, 4.8, 'Excelente estabelecimento, ambiente agradável e bom atendimento.', '2022-12-03', '2022-12-03'),
+    (6, 2.9, 'Não gostei muito do estabelecimento, ambiente um pouco sujo.', '2022-12-03', '2022-12-03'),
+    (7, 4.6, 'Ótimo evento, muitas atrações legais!', '2022-12-04', NULL),
+    (8, 3.7, 'Preços um pouco elevados, mas o ambiente é legal.', '2022-12-04', NULL),
+    (9, 4.2, 'Evento bom, organização poderia ser um pouco melhor.', '2022-12-05', '2022-12-05'),
+    (10, 1.5, 'Evento mal organizado, perda de tempo e dinheiro.', '2022-12-05', '2022-12-05'),
+    (11, 4.9, 'Estabelecimento com boas opções de comida e bebida, recomendo.', '2022-12-06', NULL),
+    (12, 2.3, 'Atendimento péssimo, não volto mais.', '2022-12-06', NULL),
+    (13, 3.5, 'Evento ok, nada de muito especial.', '2022-12-07', '2022-12-07'),
+    (14, 4.0, 'Bom estabelecimento, preço justo e ambiente agradável.', '2022-12-07', '2022-12-07'),
+    (15, 4.7, 'Ótimo evento, muitas opções de lazer!', '2022-12-08', NULL),
+    (16, 3.0, 'Não gostei do estabelecimento, banheiros sujos e poucas opções de comida.', '2022-12-08', NULL),
+    (17, 4.4, 'Evento bacana, recomendo.', '2022-12-09', '2022-12-09'),
+    (18, 2.5, 'Evento fraco, não valeu a pena.', '2022-12-09', '2022-12-09'),
+    (19, 3.8, 'Estabelecimento ok, nada de muito especial.', '2022-12-10', NULL),
+
+INSERT INTO VALUES ('user1', 'password1', '2022-12-31', NULL),
+       ('user2', 'password2', '2022-12-31', '2023-01-15'),
+       ('user3', 'password3', '2023-01-01', '2023-02-02'),
+       ('user4', 'password4', '2023-02-01', NULL),
+       ('user5', 'password5', '2023-02-15', NULL),
+       ('user6', 'password6', '2023-02-15', NULL),
+       ('user7', 'password7', '2023-02-16', NULL),
+       ('user8', 'password8', '2023-02-16', NULL),
+       ('user9', 'password9', '2023-02-17', NULL),
+       ('user10', 'password10', '2023-02-17', NULL);
