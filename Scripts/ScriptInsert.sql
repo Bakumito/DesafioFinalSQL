@@ -555,13 +555,14 @@ INSERT INTO Avaliacao VALUES
     (18, 2.5, 'Evento fraco, não valeu a pena.', '2022-12-09', '2022-12-09'),
     (19, 3.8, 'Estabelecimento ok, nada de muito especial.', '2022-12-10', NULL),
 
-INSERT INTO VALUES ('user1', 'password1', '2022-12-31', NULL),
-       ('user2', 'password2', '2022-12-31', '2023-01-15'),
-       ('user3', 'password3', '2023-01-01', '2023-02-02'),
-       ('user4', 'password4', '2023-02-01', NULL),
-       ('user5', 'password5', '2023-02-15', NULL),
-       ('user6', 'password6', '2023-02-15', NULL),
-       ('user7', 'password7', '2023-02-16', NULL),
-       ('user8', 'password8', '2023-02-16', NULL),
-       ('user9', 'password9', '2023-02-17', NULL),
-       ('user10', 'password10', '2023-02-17', NULL);
+INSERT INTO Usuario VALUES 
+    ('user1', 'password1', '2022-12-31', NULL),
+    ('user2', 'password2', '2022-12-31', '2023-01-15'),
+    ('user3', 'password3', '2023-01-01', '2023-02-02'),
+    ('user4', 'password4', '2023-02-01', NULL),
+    ('user5', 'password5', '2023-02-15', NULL),
+    ('user6', 'password6', '2023-02-15', NULL),
+    ('user7', 'password7', '2023-02-16', NULL),
+    ('user8', 'password8', '2023-02-16', NULL),
+    ('user9', 'password9', '2023-02-17', NULL),
+    ('user10', 'password10', '2023-02-17', NULL);
