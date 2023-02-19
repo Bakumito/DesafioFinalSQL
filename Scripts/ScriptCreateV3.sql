@@ -320,4 +320,3 @@ CREATE TABLE Usuario (
     dataCadastro DATETIME NOT NULL DEFAULT GETDATE(),
     dataUltimaAlteracao DATE
 );
-
