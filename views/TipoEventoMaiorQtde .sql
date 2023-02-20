@@ -1,14 +1,16 @@
 CREATE VIEW AS TipoEventoMaiorQtde 
 
 /*Esta View tem como objetvio descobrir os tipos de 
-eventos com maior qquantidade de Clientes
+eventos com maior quantidade de Clientes
 */
 
 SELECT t.id, t.descricao, COUNT(c.id) AS QtdClientes
     FROM TipoEvento t
     INNER JOIN Evento e 
         ON t.id = e.idTipoEvento
+	INNER JOIN ClienteEstabelecimentoInteresse cei
+		ON e.id = cei.idEstabelecimento
     INNER JOIN Cliente c 
-        ON e.id = c.idContatoEvento
+        ON cei.idCliente = c.id
     GROUP BY t.id, t.descricao
     ORDER BY QtdClientes DESC

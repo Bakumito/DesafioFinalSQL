@@ -1,6 +1,9 @@
 CREATE VIEW AS MelhorEstabelecimentoCidade 
 
-SELECT e.*, c.nome AS cidade, AVG(a.pontos) AS mediaAvaliacao
+/* A seguinte view serverá para selecionar o melhor 
+estabelecimento baseado na sua média de pontos por cidade*/
+
+SELECT e.nomeFantasia, c.nome AS cidade, AVG(a.pontos) AS mediaAvaliacao
     FROM Estabelecimento e
     INNER JOIN EventoEstabelecimento ee
         ON e.id = ee.idEstabelecimento
@@ -10,5 +13,5 @@ SELECT e.*, c.nome AS cidade, AVG(a.pontos) AS mediaAvaliacao
         ON e.idEndereco = en.id
     INNER JOIN Cidade c
         ON en.idCidade = c.id
-GROUP BY e.id, e.idContatoEstabelecimento, e.idTipoEstabelecimento, e.idEndereco, e.idAssinatura, e.idProprietario, e.nomeFantasia, e.razaoSocial, e.email, e.cnpj, e.dataCadastro, e.dataUltimaAlteracao, c.nome
+GROUP BY e.nomeFantasia, c.nome
 ORDER BY mediaAvaliacao DESC;
