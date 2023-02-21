@@ -563,5 +563,5 @@ INSERT INTO Usuario VALUES
     ('user7', 'password7', GETDATE(), NULL),
     ('user8', 'password8', GETDATE(), NULL),
     ('user9', 'password9', GETDATE(), NULL),
-    ('user10', 'password10', GETDATE(), NULL);]
+    ('user10', 'password10', GETDATE(), NULL);
     
