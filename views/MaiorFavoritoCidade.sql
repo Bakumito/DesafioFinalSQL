@@ -17,5 +17,7 @@ SELECT ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.*) AS Quantidad
         ON en.idCidade = ci.id
     INNER JOIN EventoClienteFavorito ecf 
         ON ev.id = ecf.idEvento
+    GROUP BY Nome_Cidade
+    ORDER BY ci.nome DESC 
 
     
