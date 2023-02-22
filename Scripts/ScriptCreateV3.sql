@@ -1,5 +1,5 @@
 --CREATE DATABASE PlacesCompany;
---USE DATABASE PlacesCompany;
+--USE PlacesCompany;
 
 CREATE TABLE Estado ( 
     id TINYINT PRIMARY KEY IDENTITY(1,1),
