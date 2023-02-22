@@ -136,6 +136,8 @@ CREATE TABLE MidiaCliente (
 	idCliente INT,
 	foto VARBINARY(MAX),
 	video VARBINARY(MAX),
+    dataCadastro DATETIME NOT NULL DEFAULT GETDATE(),
+    dataUltimaAlteracao DATE,
 	CONSTRAINT fk_idCliente_MidiaCliente FOREIGN KEY (idCliente) 
 		REFERENCES Cliente (id)
 );

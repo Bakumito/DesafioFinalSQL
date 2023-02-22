@@ -308,15 +308,15 @@ INSERT INTO Cliente VALUES
     (20, 'Amanda', 'Lin', '95162387409', '1998-11-12', NULL, 'amandalin@example.com', 'mypassword', GETDATE(), NULL);
 
 INSERT INTO MidiaCliente VALUES
-    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid)), 
-    (2, 0x89504e470d0a1a0a, NULL), 
-    (5, NULL, 0x89504e470d0a1a0a),
-    (7, 0x89504e470d0a1a0a, NULL),
-    (9, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a),
-    (13, 0x89504e470d0a1a0a, NULL),
-    (16, NULL, 0x89504e470d0a1a0a),
-    (18, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a),
-    (20, 0x89504e470d0a1a0a, NULL);
+    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL), 
+    (2, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL), 
+    (5, NULL, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (7, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL),
+    (9, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (13, 0x89504e470d0a1a0a, NULL), GETDATE(), NULL,
+    (16, NULL, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (18, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
+    (20, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL);
 
 INSERT INTO Evento VALUES
     (1, 1, 'Concerto de Rock', 'Concerto da banda de rock X', '2023-05-15 20:00:00', '2023-05-15 23:00:00', 1000, '18+', GETDATE(), NULL),
