@@ -5,13 +5,11 @@ CREATE VIEW AS EstabelecimentoMaisEvento
 
 SELECT e.nomeFantasia, c.nome AS cidade, COUNT(*) AS Quantidade  
     FROM Estabelecimento e 
-    INNER JOIN Cidade c
-        ON e.idCidade = c.id
-    INNER JOIN EventoEstabelecimento ee
-        ON e.id = ee.idEvento 
-    INNER JOIN Endereco en
+	INNER JOIN Endereco en
         ON e.idEndereco = en.id
     INNER JOIN Cidade c
         ON en.idCidade = c.id
-GROUP BY e.nomeFantasia
+    INNER JOIN EventoEstabelecimento ee
+        ON e.id = ee.idEvento 
+GROUP BY e.nomeFantasia, c.nome
 ORDER BY Quantidade DESC

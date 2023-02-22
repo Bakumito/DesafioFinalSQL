@@ -319,25 +319,25 @@ INSERT INTO MidiaCliente VALUES
     (20, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL);
 
 INSERT INTO Evento VALUES
-    (1, 1, 'Concerto de Rock', 'Concerto da banda de rock X', '2023-05-15 20:00:00', '2023-05-15 23:00:00', 1000, '18+', GETDATE(), NULL),
-    (2, 2, 'Festival de Cinema', 'Festival de cinema independente', '2023-06-20 10:00:00', '2023-06-25 22:00:00', 500, 'Livre', GETDATE(), NULL),
-    (3, 3, 'Maratona de Corrida', 'Maratona de 42 km', '2023-07-10 07:00:00', '2023-07-10 12:00:00', 100, '18+', GETDATE(), '2023-02-16'),
-    (1, 4, 'Festival de Jazz', 'Festival de Jazz no parque', '2023-08-15 18:00:00', '2023-08-15 22:00:00', 500, 'Livre', GETDATE(), NULL),
-    (2, 5, 'Mostra de Arte Contemporânea', 'Mostra de Arte Contemporânea no Museu de Arte', '2023-09-01 10:00:00', '2023-09-30 18:00:00', 50, 'Livre', GETDATE(), '2023-02-16'),
-    (3, 6, 'Meia Maratona da Cidade', 'Meia Maratona de 21 km pela cidade', '2023-10-08 07:00:00', '2023-10-08 11:00:00', 200, '18+', GETDATE(), NULL),
-    (1, 7, 'Show de Música Eletrônica', 'Show de música eletrônica na boate X', '2023-11-20 23:00:00', '2023-11-21 05:00:00', 500, '18+', GETDATE(), '2023-02-16'),
-    (2, 8, 'Festival de Teatro', 'Festival de teatro infantil no teatro X', '2023-12-10 14:00:00', '2023-12-10 18:00:00', 100, 'Livre', GETDATE(), NULL),
-    (3, 9, 'Corrida de Obstáculos', 'Corrida de obstáculos em sítio Y', '2024-01-15 09:00:00', '2024-01-15 12:00:00', 50, '18+', GETDATE(), '2023-02-16'),
-    (1, 1, 'Festa de Aniversário', 'Comemoração do aniversário de João', '2023-03-10 20:00:00', '2023-03-11 02:00:00', 50, 'Livre', GETDATE(), NULL),
-    (2, 2, 'Conferência de Tecnologia', 'Evento sobre tecnologia e inovação', '2023-05-20 09:00:00', '2023-05-21 18:00:00', 200, 'Livre', GETDATE(), '2022-02-16'),
-    (1, 3, 'Show de Rock', 'Apresentação da banda The Rolling Stones', '2023-07-07 21:00:00', '2023-07-08 00:00:00', 100, '18+', GETDATE(), NULL),
-    (3, 4, 'Exposição de Arte', 'Mostra de arte contemporânea', '2023-08-15 10:00:00', '2023-08-20 18:00:00', 500, 'Livre', GETDATE(), '2022-02-17'),
-    (2, 5, 'Simpósio de Medicina', 'Evento sobre novidades na área de saúde', '2023-09-01 09:00:00', '2023-09-03 18:00:00', 150, '18+', GETDATE(), NULL),
-    (1, 1, 'Concerto de Rock', 'Apresentação de bandas de rock', '2023-05-20 20:00:00', '2023-05-20 23:00:00', 500, '18+', GETDATE(), NULL),
-    (2, 2, 'Feira de Tecnologia', 'Exposição de tecnologias e novidades do mercado', '2023-09-10 10:00:00', '2023-09-12 18:00:00', 1000, 'Livre', GETDATE(), '2023-02-17'),
-    (3, 3, 'Festival de Cinema', 'Mostra de filmes nacionais e internacionais', '2023-07-07 16:00:00', '2023-07-14 22:00:00', 300, '16+', GETDATE(), NULL),
-    (4, 4, 'Desfile de Moda', 'Apresentação de novas coleções de moda', '2023-04-28 19:00:00', '2023-04-28 22:00:00', 200, 'Livre', GETDATE(), NULL),
-    (5, 5, 'Feira de Artesanato', 'Exposição de artesanatos regionais', '2023-06-05 10:00:00', '2023-06-05 18:00:00', 500, 'Livre', GETDATE(), '2023-02-18');
+    (1, 1, 'Concerto de Rock', 'Concerto da banda de rock X', '20230515 20:00:00', '20230515 23:00:00', 1000, '18+', GETDATE(), NULL),
+    (2, 2, 'Festival de Cinema', 'Festival de cinema independente', '20230620 10:00:00', '20230625 22:00:00', 500, 'Livre', GETDATE(), NULL),
+    (3, 3, 'Maratona de Corrida', 'Maratona de 42 km', '20230710 07:00:00', '20230710 12:00:00', 100, '18+', GETDATE(), '20230216'),
+    (1, 4, 'Festival de Jazz', 'Festival de Jazz no parque', '20230815 18:00:00', '20230815 22:00:00', 500, 'Livre', GETDATE(), NULL),
+    (2, 5, 'Mostra de Arte Contemporânea', 'Mostra de Arte Contemporânea no Museu de Arte', '20230901 10:00:00', '20230930 18:00:00', 50, 'Livre', GETDATE(), '20230216'),
+    (3, 6, 'Meia Maratona da Cidade', 'Meia Maratona de 21 km pela cidade', '20231008 07:00:00', '20231008 11:00:00', 200, '18+', GETDATE(), NULL),
+    (1, 7, 'Show de Música Eletrônica', 'Show de música eletrônica na boate X', '20231120 23:00:00', '20231121 05:00:00', 500, '18+', GETDATE(), '20230216'),
+    (2, 8, 'Festival de Teatro', 'Festival de teatro infantil no teatro X', '20231210 14:00:00', '20231210 18:00:00', 100, 'Livre', GETDATE(), NULL),
+    (3, 9, 'Corrida de Obstáculos', 'Corrida de obstáculos em sítio Y', '20240115 09:00:00', '20240115 12:00:00', 50, '18+', GETDATE(), '20230216'),
+    (1, 1, 'Festa de Aniversário', 'Comemoração do aniversário de João', '20230310 20:00:00', '20230311 02:00:00', 50, 'Livre', GETDATE(), NULL),
+    (2, 2, 'Conferência de Tecnologia', 'Evento sobre tecnologia e inovação', '20230520 09:00:00', '20230521 18:00:00', 200, 'Livre', GETDATE(), '20220216'),
+    (1, 3, 'Show de Rock', 'Apresentação da banda The Rolling Stones', '20230707 21:00:00', '20230708 00:00:00', 100, '18+', GETDATE(), NULL),
+    (3, 4, 'Exposição de Arte', 'Mostra de arte contemporânea', '20230815 10:00:00', '20230820 18:00:00', 500, 'Livre', GETDATE(), '20220217'),
+    (2, 5, 'Simpósio de Medicina', 'Evento sobre novidades na área de saúde', '20230901 09:00:00', '20230903 18:00:00', 150, '18+', GETDATE(), NULL),
+    (1, 1, 'Concerto de Rock', 'Apresentação de bandas de rock', '20230520 20:00:00', '20230520 23:00:00', 500, '18+', GETDATE(), NULL),
+    (2, 2, 'Feira de Tecnologia', 'Exposição de tecnologias e novidades do mercado', '20230910 10:00:00', '20230912 18:00:00', 1000, 'Livre', GETDATE(), '20230217'),
+    (3, 3, 'Festival de Cinema', 'Mostra de filmes nacionais e internacionais', '20230707 16:00:00', '20230714 22:00:00', 300, '16+', GETDATE(), NULL),
+    (4, 4, 'Desfile de Moda', 'Apresentação de novas coleções de moda', '20230428 19:00:00', '20230428 22:00:00', 200, 'Livre', GETDATE(), NULL),
+    (5, 5, 'Feira de Artesanato', 'Exposição de artesanatos regionais', '20230605 10:00:00', '20230605 18:00:00', 500, 'Livre', GETDATE(), '20230218');
 
 INSERT INTO MidiaEvento VALUES 
     (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB ) as vid), GETDATE(), NULL),
@@ -380,18 +380,18 @@ INSERT INTO EventoClienteFavorito VALUES
     (12, 4);
 
 INSERT INTO CupomEvento VALUES
-    (1, '2023-06-30 23:59:59', 'a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20', 1, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos selecionados', GETDATE(), NULL),
-    (2, '2023-05-31 23:59:59', 'o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14', 1, 1.0, 10, 'Cupom de desconto de 100%', 'Válido apenas para a primeira compra', GETDATE(), NULL),
-    (3, '2022-09-30 23:59:59', 'g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6', 0, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$100,00', GETDATE(), NULL),
-    (4, '2023-12-31 23:59:59', 'q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para a categoria de roupas', GETDATE(), NULL),
-    (5, '2024-02-28 23:59:59', 'm13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$300,00', GETDATE(), NULL),
-    (6, '2021-07-31 23:59:59', 'c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em promoção', GETDATE(), NULL),
-    (7, '2023-08-31 23:59:59', 'p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$200,00', GETDATE(), NULL),
-    (8, '2023-11-30 23:59:59', 'l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11', 1, 0.1, 15, 'Cupom de desconto de 15%', 'Válido apenas para produtos em lançamento', GETDATE(), NULL),
-    (9, '2022-10-31 23:59:59', 'f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em estoque limitado', GETDATE(), NULL),
-    (10, '2024-01-31 23:59:59', 't20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19', 1, 0.2, 25, 'Cupom de desconto de 25%', 'Válido apenas para compras acima de R$400,00', GETDATE(), NULL),
-    (11, '2023-09-15 23:59:59', 'e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4', 1, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$150,00', GETDATE(), NULL),
-    (12, '2023-11-15 23:59:59', 'r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para compras acima de R$300,00', GETDATE(), NULL);
+    (1, '20230630 23:59:59', 'a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20', 1, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos selecionados', GETDATE(), NULL),
+    (2, '20230531 23:59:59', 'o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14', 1, 1.0, 10, 'Cupom de desconto de 100%', 'Válido apenas para a primeira compra', GETDATE(), NULL),
+    (3, '20220930 23:59:59', 'g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6', 0, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$100,00', GETDATE(), NULL),
+    (4, '20231231 23:59:59', 'q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para a categoria de roupas', GETDATE(), NULL),
+    (5, '20240228 23:59:59', 'm13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$300,00', GETDATE(), NULL),
+    (6, '20210731 23:59:59', 'c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em promoção', GETDATE(), NULL),
+    (7, '20230831 23:59:59', 'p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15', 1, 0.1, 10, 'Cupom de desconto de 10%', 'Válido apenas para compras acima de R$200,00', GETDATE(), NULL),
+    (8, '20231130 23:59:59', 'l12m13n14o15p16q17r18s19t20a1b2c3d4e5f6g7h8i9j10k11', 1, 0.1, 15, 'Cupom de desconto de 15%', 'Válido apenas para produtos em lançamento', GETDATE(), NULL),
+    (9, '20221031 23:59:59', 'f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4e5', 0, 0.5, 50, 'Cupom de desconto de 50%', 'Válido apenas para produtos em estoque limitado', GETDATE(), NULL),
+    (10, '20240131 23:59:59', 't20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19', 1, 0.2, 25, 'Cupom de desconto de 25%', 'Válido apenas para compras acima de R$400,00', GETDATE(), NULL),
+    (11, '20230915 23:59:59', 'e5f6g7h8i9j10k11l12m13n14o15p16q17r18s19t20a1b2c3d4', 1, 0.7, 75, 'Cupom de desconto de 75%', 'Válido apenas para compras acima de R$150,00', GETDATE(), NULL),
+    (12, '20231115 23:59:59', 'r18s19t20a1b2c3d4e5f6g7h8i9j10k11l12m13n14o15p16q17', 1, 0.2, 20, 'Cupom de desconto de 20%', 'Válido apenas para compras acima de R$300,00', GETDATE(), NULL);
 
 INSERT INTO Estabelecimento VALUES 
     (1, 1, 1, 1, 1, 'Loja 1', 'Loja 1 LTDA', 'loja1@gmail.com', '12345678901234', GETDATE(), NULL),
@@ -457,20 +457,20 @@ INSERT INTO Entrada VALUES
     (5, 10.75, GETDATE());
 
 INSERT INTO CupomEstabelecimento VALUES
-    (1, '2023-03-01 00:00:00', '1a2b3c4d', 1, 10.0, NULL, 'Cupom de desconto', 'Desconto de 10% em qualquer compra', GETDATE(), NULL),
-    (2, '2023-03-15 00:00:00', '5e6f7g8h', 1, 5.0, 50.0, 'Cupom de aniversário', 'Desconto de R$5 em compras acima de R$50', GETDATE(), NULL),
-    (3, '2023-03-31 00:00:00', '9i0j1k2l', 0, 20.0, NULL, 'Cupom de fidelidade', 'Desconto de 20% para clientes frequentes', GETDATE(), NULL),
-    (4, '2023-04-01 00:00:00', '3m4n5o6p', 1, 15.0, NULL, 'Cupom de lançamento', 'Desconto de 15% em novos produtos', GETDATE(), NULL),
-    (5, '2023-04-15 00:00:00', '7q8r9s0t', 1, 7.5, 30.0, 'Cupom de Páscoa', 'Desconto de R$7,50 em compras acima de R$30', GETDATE(), NULL),
-    (1, '2023-05-01 00:00:00', 'a1b2c3d4', 1, 5.0, 50.0, 'Cupom de desconto', 'Desconto de R$5 em compras acima de R$50', GETDATE(), NULL),
-    (2, '2023-05-15 00:00:00', 'e5f6g7h8', 1, 20.0, NULL, 'Cupom de aniversário', 'Desconto de 20% em qualquer compra', GETDATE(), NULL),
-    (3, '2023-05-31 00:00:00', 'i9j0k1l2', 0, 25.0, NULL, 'Cupom de fidelidade', 'Desconto de 25% para clientes frequentes', GETDATE(), NULL),
-    (4, '2023-06-01 00:00:00', 'm3n4o5p6', 1, 10.0, 100.0, 'Cupom de lançamento', 'Desconto de R$10 em compras acima de R$100', GETDATE(), NULL),
-    (5, '2023-06-15 00:00:00', 'q7r8s9t0', 1, 5.0, NULL, 'Cupom de dia dos namorados', 'Desconto de R$5 em qualquer compra', GETDATE(), NULL),
-    (1, '2023-07-01 00:00:00', 'a2b3c4d5', 0, 15.0, NULL, 'Cupom de inverno', 'Desconto de 15% em produtos de inverno', GETDATE(), NULL),
-    (2, '2023-07-15 00:00:00', 'e6f7g8h9', 1, 7.0, 30.0, 'Cupom de aniversário', 'Desconto de R$7 em compras acima de R$30', GETDATE(), NULL),
-    (3, '2023-07-31 00:00:00', 'i0j1k2l3', 1, 10.0, NULL, 'Cupom de fidelidade', 'Desconto de R$10 em qualquer compra', GETDATE(), NULL),
-    (4, '2023-08-01 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', GETDATE(), NULL);
+    (1, '20230301 00:00:00', '1a2b3c4d', 1, 1.0, NULL, 'Cupom de desconto', 'Desconto de 10% em qualquer compra', GETDATE(), NULL),
+    (2, '20230315 00:00:00', '5e6f7g8h', 1, 5.0, 50.0, 'Cupom de aniversário', 'Desconto de R$5 em compras acima de R$50', GETDATE(), NULL),
+    (3, '20230331 00:00:00', '9i0j1k2l', 0, 2.0, NULL, 'Cupom de fidelidade', 'Desconto de 20% para clientes frequentes', GETDATE(), NULL),
+    (4, '20230401 00:00:00', '3m4n5o6p', 1, 5.0, NULL, 'Cupom de lançamento', 'Desconto de 15% em novos produtos', GETDATE(), NULL),
+    (5, '20230415 00:00:00', '7q8r9s0t', 1, 7.5, 30.0, 'Cupom de Páscoa', 'Desconto de R$7,50 em compras acima de R$30', GETDATE(), NULL),
+    (1, '20230501 00:00:00', 'a1b2c3d4', 1, 5.0, 50.0, 'Cupom de desconto', 'Desconto de R$5 em compras acima de R$50', GETDATE(), NULL),
+    (2, '20230515 00:00:00', 'e5f6g7h8', 1, 2.0, NULL, 'Cupom de aniversário', 'Desconto de 20% em qualquer compra', GETDATE(), NULL),
+    (3, '20230531 00:00:00', 'i9j0k1l2', 0, 5.0, NULL, 'Cupom de fidelidade', 'Desconto de 25% para clientes frequentes', GETDATE(), NULL),
+    (4, '20230601 00:00:00', 'm3n4o5p6', 1, 1.0, 10.0, 'Cupom de lançamento', 'Desconto de R$10 em compras acima de R$100', GETDATE(), NULL),
+    (5, '20230615 00:00:00', 'q7r8s9t0', 1, 5.0, NULL, 'Cupom de dia dos namorados', 'Desconto de R$5 em qualquer compra', GETDATE(), NULL),
+    (1, '20230701 00:00:00', 'a2b3c4d5', 0, 1.0, NULL, 'Cupom de inverno', 'Desconto de 15% em produtos de inverno', GETDATE(), NULL),
+    (2, '20230715 00:00:00', 'e6f7g8h9', 1, 7.0, 30.0, 'Cupom de aniversário', 'Desconto de R$7 em compras acima de R$30', GETDATE(), NULL),
+    (3, '20230731 00:00:00', 'i0j1k2l3', 1, 1.0, NULL, 'Cupom de fidelidade', 'Desconto de R$10 em qualquer compra', GETDATE(), NULL),
+    (4, '20230801 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', GETDATE(), NULL);
 
 INSERT INTO MidiaEstabelecimento VALUES 
 	(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL),
@@ -509,16 +509,16 @@ INSERT INTO Ingresso VALUES
     (12, '9w0x1y2z', 35.0, 2, GETDATE(), NULL);
 
 INSERT INTO PagamentoIngresso VALUES
-    (1, 1, '2023-02-15 10:30:00', 100.00, GETDATE(), NULL),
-    (2, 2, '2023-02-14 15:45:00', 50.00, GETDATE(), NULL),
-    (3, 3, '2023-02-13 12:00:00', 75.00, GETDATE(), NULL),
-    (1, 4, '2023-02-12 18:30:00', 150.00, GETDATE(), NULL),
-    (2, 5, '2023-02-11 10:00:00', 200.00, GETDATE(), NULL),
-    (1, 1, '2022-03-01 10:00:00', 100.00, GETDATE(), NULL),
-    (2, 2, '2022-03-02 11:00:00', 120.00, GETDATE(), NULL),
-    (3, 3, '2022-03-03 12:00:00', 80.00, GETDATE(), NULL),
-    (1, 4, '2022-03-04 13:00:00', 150.00, GETDATE(), NULL),
-    (2, 5, '2022-03-05 14:00:00', 200.00, GETDATE(), NULL);
+    (1, 1, '20230215 10:30:00', 100.00, GETDATE(), NULL),
+    (2, 2, '20230214 15:45:00', 50.00, GETDATE(), NULL),
+    (3, 3, '20230213 12:00:00', 75.00, GETDATE(), NULL),
+    (1, 4, '20230212 18:30:00', 150.00, GETDATE(), NULL),
+    (2, 5, '20230211 10:00:00', 200.00, GETDATE(), NULL),
+    (1, 1, '20220301 10:00:00', 100.00, GETDATE(), NULL),
+    (2, 2, '20220302 11:00:00', 120.00, GETDATE(), NULL),
+    (3, 3, '20220303 12:00:00', 80.00, GETDATE(), NULL),
+    (1, 4, '20220304 13:00:00', 150.00, GETDATE(), NULL),
+    (2, 5, '20220305 14:00:00', 200.00, GETDATE(), NULL);
 
 INSERT INTO EventoEstabelecimento VALUES 
     (1, 1),
@@ -543,15 +543,15 @@ INSERT INTO Avaliacao VALUES
     (8, 3.7, 'Preços um pouco elevados, mas o ambiente é legal.', GETDATE(), NULL),
     (9, 4.2, 'Evento bom, organização poderia ser um pouco melhor.', GETDATE(), '2022-12-05'),
     (10, 1.5, 'Evento mal organizado, perda de tempo e dinheiro.', GETDATE(), '2022-12-05'),
-    (11, 4.9, 'Estabelecimento com boas opções de comida e bebida, recomendo.', GETDATE(), NULL),
-    (12, 2.3, 'Atendimento péssimo, não volto mais.', GETDATE(), NULL),
-    (13, 3.5, 'Evento ok, nada de muito especial.', GETDATE(), '2022-12-07'),
-    (14, 4.0, 'Bom estabelecimento, preço justo e ambiente agradável.', GETDATE(), '2022-12-07'),
-    (15, 4.7, 'Ótimo evento, muitas opções de lazer!', GETDATE(), NULL),
-    (16, 3.0, 'Não gostei do estabelecimento, banheiros sujos e poucas opções de comida.', GETDATE(), NULL),
-    (17, 4.4, 'Evento bacana, recomendo.', GETDATE(), '2022-12-09'),
-    (18, 2.5, 'Evento fraco, não valeu a pena.', GETDATE(), '2022-12-09'),
-    (19, 3.8, 'Estabelecimento ok, nada de muito especial.', GETDATE(), NULL);
+    (10, 4.9, 'Estabelecimento com boas opções de comida e bebida, recomendo.', GETDATE(), NULL),
+    (9, 2.3, 'Atendimento péssimo, não volto mais.', GETDATE(), NULL),
+    (8, 3.5, 'Evento ok, nada de muito especial.', GETDATE(), '2022-12-07'),
+    (7, 4.0, 'Bom estabelecimento, preço justo e ambiente agradável.', GETDATE(), '2022-12-07'),
+    (6, 4.7, 'Ótimo evento, muitas opções de lazer!', GETDATE(), NULL),
+    (5, 3.0, 'Não gostei do estabelecimento, banheiros sujos e poucas opções de comida.', GETDATE(), NULL),
+    (4, 4.4, 'Evento bacana, recomendo.', GETDATE(), '2022-12-09'),
+    (3, 2.5, 'Evento fraco, não valeu a pena.', GETDATE(), '2022-12-09'),
+    (1, 3.8, 'Estabelecimento ok, nada de muito especial.', GETDATE(), NULL);
 
 INSERT INTO Usuario VALUES 
     ('user1', 'password1', GETDATE(), NULL),

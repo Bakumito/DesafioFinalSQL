@@ -5,7 +5,7 @@ selecionar o evento com maior numero
 de favoritos por cidade
 */ 
 
-SELECT ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.*) AS Quantidade_Favorito
+SELECT ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.id) AS Quantidade_Favorito
     FROM Evento ev 
     INNER JOIN EventoEstabelecimento ee
         ON ev.id = ee.idEvento
@@ -17,7 +17,7 @@ SELECT ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.*) AS Quantidad
         ON en.idCidade = ci.id
     INNER JOIN EventoClienteFavorito ecf 
         ON ev.id = ecf.idEvento
-    GROUP BY Nome_Cidade
+    GROUP BY ci.nome, ev.nome
     ORDER BY ci.nome DESC 
 
     
