@@ -1,27 +1,19 @@
-CREATE TABLE Usuario (
-	id TINYINT PRIMARY KEY IDENTITY(1,1),
-	login VARCHAR(60) NOT NULL,
-	senha VARCHAR(64) NOT NULL,
-	dataCadastro DATETIME NOT NULL DEFAULT GETDATE(),
-	dataUltimaAlteracao DATE
-	);
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[SP.VerificaCredenciais] ') AND objectproperty(ID,N'isProcedure') = 1)
+    DROP PROCEDURE [SP.VerificaCredenciais] 
 
-INSERT INTO Usuario VALUES
-    ('Gustavo', '123',GETDATE(),null);
-INSERT INTO Usuario VALUES
-    ('Betoneira', '1234',GETDATE(),null);
-go
+GO
 
-DROP TABLE Usuario;
-SELECT * FROM Usuario;
-DROP PROCEDURE VerificaCredenciais;
-
-go
-
-CREATE PROCEDURE VerificaCredenciais 
+CREATE PROCEDURE [SP.VerificaCredenciais]  
     @login VARCHAR(60),
     @senha VARCHAR(64)
 AS
+    /* Documentação
+    Arquivo Fonte..........: Procedures.sql
+    Objetivo...............: Criará um procedimento para verificação de credenciais de um usuário
+    Autor..................: Gustavo Barbosa
+    Data...................: 22/02/2023
+    Ex.....................: EXEC [SP.VerificaCredenciais] @login = 'betoneira', @senha = 'jooj'
+    */
 BEGIN
     SET NOCOUNT ON;
     IF EXISTS(SELECT * FROM Usuario WHERE login = @login AND senha = @senha)
@@ -29,6 +21,3 @@ BEGIN
     ELSE
         SELECT 'Credenciais inválidas' AS Resultado
 END
-
-EXEC VerificaCredenciais 'Gustavo', '123';
-EXEC VerificaCredenciais 'Gustavo', '12';
