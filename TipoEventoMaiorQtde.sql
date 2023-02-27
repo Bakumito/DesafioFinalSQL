@@ -4,7 +4,7 @@ CREATE VIEW TipoEventoMaiorQtde AS
 eventos com maior quantidade de Clientes
 */
 
-SELECT t.id, t.descricao, COUNT(c.id) AS QtdClientes
+SELECT TOP 10 t.id, t.descricao, COUNT(c.id) AS QtdClientes
     FROM TipoEvento t
     INNER JOIN Evento e 
         ON t.id = e.idTipoEvento
