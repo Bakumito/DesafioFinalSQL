@@ -1,4 +1,4 @@
-CREATE VIEW AS TipoEventoMaiorQtde 
+CREATE VIEW TipoEventoMaiorQtde AS 
 
 /*Esta View tem como objetvio descobrir os tipos de 
 eventos com maior quantidade de Clientes

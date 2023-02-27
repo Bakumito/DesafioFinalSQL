@@ -1,4 +1,4 @@
-CREATE VIEW AS EstabelecimentoMaisEvento 
+CREATE VIEW EstabelecimentoMaisEvento AS
 
 /*A View a seguit tem como objetivo saber quais
  estabelecimentos tem mais eventos por cidade*/
