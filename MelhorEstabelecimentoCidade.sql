@@ -1,4 +1,4 @@
-CREATE VIEW AS MelhorEstabelecimentoCidade 
+CREATE VIEW MelhorEstabelecimentoCidade AS
 
 /* A seguinte view serverá para selecionar o melhor 
 estabelecimento baseado na sua média de pontos por cidade*/

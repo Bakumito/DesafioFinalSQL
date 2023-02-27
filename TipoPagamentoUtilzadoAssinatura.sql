@@ -1,4 +1,4 @@
-CREATE VIEW AS TipoPagamentoUtilzadoAssinatura
+CREATE VIEW TipoPagamentoUtilzadoAssinatura AS
 
 /* A Seguinte view tem como objetivo
 demonstrar a forma de pagamento mais 

@@ -1,4 +1,4 @@
-CREATE VIEW AS EventoMaiorFavorito
+CREATE VIEW EventoMaiorFavorito AS
 
 /* A seguinte view tem como objetivo 
 selecionar o evento com maior numero
