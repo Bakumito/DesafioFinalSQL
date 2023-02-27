@@ -4,7 +4,7 @@ CREATE VIEW TipoPagamentoUtilzadoAssinatura AS
 demonstrar a forma de pagamento mais 
 utilizada para assinatura*/
 
-SELECT tpa.descricao AS Forma_Pagamento, COUNT(tpa.id) AS Quantidade
+SELECT TOP 10 tpa.descricao AS Forma_Pagamento, COUNT(tpa.id) AS Quantidade
     FROM TipoPagamentoAssinatura tpa 
 	GROUP BY tpa.descricao
     ORDER BY Quantidade DESC
