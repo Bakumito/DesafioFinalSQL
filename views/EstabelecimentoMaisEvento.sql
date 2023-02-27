@@ -1,9 +1,9 @@
-CREATE VIEW AS EstabelecimentoMaisEvento 
+CREATE VIEW EstabelecimentoMaisEvento AS
 
 /*A View a seguit tem como objetivo saber quais
  estabelecimentos tem mais eventos por cidade*/
 
-SELECT e.nomeFantasia, c.nome AS cidade, COUNT(*) AS Quantidade  
+SELECT TOP 10 e.nomeFantasia, c.nome AS cidade, COUNT(*) AS Quantidade  
     FROM Estabelecimento e 
 	INNER JOIN Endereco en
         ON e.idEndereco = en.id
