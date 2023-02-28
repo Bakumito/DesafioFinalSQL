@@ -82,21 +82,21 @@ INSERT INTO TipoEvento VALUES
     ('Apresentação Teatral'),
     ('Mostra de Cinema'),
     ('Feijoada');
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Assinatura VALUES 
-    ('2022-03-21', '2022-04-20', 0, 900.00, GETDATE(), NULL),
-    ('2022-04-01', NULL, 1, 900.00, GETDATE(), '2022-04-01'),
-    ('2022-05-11', '2022-05-30', 0, 900.00, GETDATE(), NULL),
-    ('2022-06-01', NULL, 1, 900.00, GETDATE(), NULL),
-    ('2022-07-12', '2022-08-11', 0, 900.00, GETDATE(), '2022-07-12'),
-    ('2022-08-01', NULL, 1, 900.00, GETDATE(), NULL),
-    ('2022-09-21', '2022-11-20', 0, 900.00, GETDATE(), '2022-09-21'),
-    ('2022-10-01', NULL, 0, 900.00, GETDATE(), NULL),
-    ('2022-11-11', '2022-11-30', 0, 900.00, GETDATE(), NULL),
-    ('2022-08-01', NULL, 1, 900.00, GETDATE(), NULL),
-    ('2022-09-21', '2022-11-20', 0, 900.00, GETDATE(), '2022-09-21'),
-    ('2022-10-01', NULL, 1, 900.00, GETDATE(), NULL),
-    ('2022-11-11', '2022-11-30', 0, 900.00, GETDATE(), NULL);
+    ('20220321', '20220420', 0, 900.00, GETDATE(), NULL),
+    ('20220401', '20220420', 1, 900.00, GETDATE(), '20220401'),
+    ('20220511', '20220530', 0, 900.00, GETDATE(), NULL),
+    ('20220601', '20220420', 1, 900.00, GETDATE(), NULL),
+    ('20220712', '20220811', 0, 900.00, GETDATE(), '20220712'),
+    ('20220801', '20220420', 1, 900.00, GETDATE(), NULL),
+    ('20220921', '20221120', 0, 900.00, GETDATE(), '20220921'),
+    ('20221001', '20220420', 0, 900.00, GETDATE(), NULL),
+    ('20221111', '20221130', 0, 900.00, GETDATE(), NULL),
+    ('20220801', '20220420', 1, 900.00, GETDATE(), NULL),
+    ('20220921', '20221120', 0, 900.00, GETDATE(), '20220921'),
+    ('20221001', '20220420', 1, 900.00, GETDATE(), NULL),
+    ('20221111', '20221130', 0, 900.00, GETDATE(), NULL);
 
 
 INSERT INTO ContatoEstabelecimento VALUES 
@@ -263,27 +263,27 @@ INSERT INTO Endereco  VALUES
     (19, '20921060', 'Engenho Novo', 'Rua Cândido Benício', '407', 'Bloco B, Apto 203', GETDATE(), NULL),
     (20, '59072710', 'Capim Macio', 'Rua Afonso Bezerra', '12', 'Sala 102', GETDATE(), NULL),
     (21, '90520000', 'Moinhos de Vento', 'Rua Quintino Bocaiúva', '558', 'Sala 2001', GETDATE(), NULL);
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 INSERT INTO PagamentoAssinatura VALUES
-    (1, 1, '2022-03-21', '2022-03-20', 0, 900.00, NULL, GETDATE(), NULL),
-    (1, 1, '2022-04-21', '2022-04-20', 0, 900.00, NULL, GETDATE(), NULL),
-    (1, 1, '2022-05-21', '2022-05-20', 0, 900.00, NULL, GETDATE(), NULL),
-    (2, 1, '2022-04-01', '2022-04-01', 1, 900.00, 0, GETDATE(), '2022-04-01'),
-    (2, 1, '2022-05-01', '2022-05-01', 1, 900.00, 0, GETDATE(), '2022-05-01'),
-    (2, 1, '2022-06-01', '2022-06-01', 1, 900.00, 0, GETDATE(), '2022-06-01'),
-    (3, 4, '2022-05-11', '2022-05-10', 0, 900.00, NULL, GETDATE(), NULL),
-    (3, 4, '2022-06-11', '2022-06-10', 0, 900.00, NULL, GETDATE(), NULL),
-    (3, 4, '2022-07-11', '2022-07-10', 0, 900.00, NULL, GETDATE(), NULL),
-    (4, 1, '2023-02-20', '2023-02-20', 1, 900.00, NULL, GETDATE(), NULL),
-    (5, 1, '2022-07-12', '2022-07-11', 1, 900.00, 0, GETDATE(), '2022-07-12'),
-    (6, 2, '2022-08-01', '2022-08-31', 0, 900.00, NULL, GETDATE(), NULL),
-    (6, 2, '2022-09-01', '2022-09-21', 0, 900.00, NULL, GETDATE(), NULL),
-    (6, 2, '2022-10-01', '2022-10-21', 0, 900.00, NULL, GETDATE(), NULL),
-    (7, 1, '2022-09-21', '2022-09-20', 1, 900.00, 0, GETDATE(), '2022-09-21'),
-    (8, 3, '2022-11-01', '2022-11-30', 0, 900.00, NULL, GETDATE(), NULL),
-    (8, 3, '2022-12-01', '2022-12-30', 0, 900.00, NULL, GETDATE(), NULL),
-    (9, 4, '2023-03-01', '2023-01-03', 0, 900.00, NULL, GETDATE(), NULL),
-    (9, 4, '2022-11-11', '2022-11-10', 0, 900.00, NULL, GETDATE(), NULL);
+    (1, 1, '20230630', '20230630', 0, 900.00, NULL, GETDATE(), NULL),
+    (1, 1, '20230630', '20230630', 0, 900.00, NULL, GETDATE(), NULL),
+    (1, 1, '20230630', '20230630', 0, 900.00, NULL, GETDATE(), NULL),
+    (2, 1, '20230630', '20230630', 1, 900.00, 0, GETDATE(), '20220401'),
+    (2, 1, '20230630', '20230630', 1, 900.00, 0, GETDATE(), '20220501'),
+    (2, 1, '20230630', '20230630', 1, 900.00, 0, GETDATE(), '20220601'),
+    (3, 4, '20220511', '20220510', 0, 900.00, NULL, GETDATE(), NULL),
+    (3, 4, '20220611', '20220610', 0, 900.00, NULL, GETDATE(), NULL),
+    (3, 4, '20220711', '20220710', 0, 900.00, NULL, GETDATE(), NULL),
+    (4, 1, '20230220', '20230220', 1, 900.00, NULL, GETDATE(), NULL),
+    (5, 1, '20220712', '20220711', 1, 900.00, 0, GETDATE(), '20220712'),
+    (6, 2, '20220801', '20220831', 0, 900.00, NULL, GETDATE(), NULL),
+    (6, 2, '20220901', '20220921', 0, 900.00, NULL, GETDATE(), NULL),
+    (6, 2, '20221001', '20221021', 0, 900.00, NULL, GETDATE(), NULL),
+    (7, 1, '20220921', '20220920', 1, 900.00, 0, GETDATE(), '20220921'),
+    (8, 3, '20221101', '20221130', 0, 900.00, NULL, GETDATE(), NULL),
+    (8, 3, '20221201', '20221230', 0, 900.00, NULL, GETDATE(), NULL),
+    (9, 4, '20230301', '20230103', 0, 900.00, NULL, GETDATE(), NULL),
+    (9, 4, '20221111', '20221110', 0, 900.00, NULL, GETDATE(), NULL);
 
 INSERT INTO Cliente VALUES 
     (1, 'João', 'Silva', '12345678901', '1990-01-01', NULL, 'joao.silva@email.com', '123456', GETDATE(), NULL),
@@ -308,7 +308,7 @@ INSERT INTO Cliente VALUES
     (20, 'Amanda', 'Lin', '95162387409', '1998-11-12', NULL, 'amandalin@example.com', 'mypassword', GETDATE(), NULL);
 
 INSERT INTO MidiaCliente VALUES
-    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL), 
+    --(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL), 
     (2, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL), 
     (5, NULL, 0x89504e470d0a1a0a, GETDATE(), NULL),
     (7, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL),
@@ -340,7 +340,7 @@ INSERT INTO Evento VALUES
     (5, 5, 'Feira de Artesanato', 'Exposição de artesanatos regionais', '20230605 10:00:00', '20230605 18:00:00', 500, 'Livre', GETDATE(), '20230218');
 
 INSERT INTO MidiaEvento VALUES 
-    (1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB ) as vid), GETDATE(), NULL),
+    --(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB ) as vid), GETDATE(), NULL),
     (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
     (3, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
     (4, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
@@ -473,7 +473,7 @@ INSERT INTO CupomEstabelecimento VALUES
     (4, '20230801 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', GETDATE(), NULL);
 
 INSERT INTO MidiaEstabelecimento VALUES 
-	(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL),
+	--(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL),
     (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
     (3, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
     (4, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
