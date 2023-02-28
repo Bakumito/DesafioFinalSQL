@@ -1,11 +1,11 @@
-CREATE VIEW AS EventoMaiorFavorito
+CREATE VIEW EventoMaiorFavorito AS
 
 /* A seguinte view tem como objetivo 
 selecionar o evento com maior numero
 de favoritos por cidade
 */ 
 
-SELECT ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.id) AS Quantidade_Favorito
+SELECT TOP 10 ev.nome AS Nome_Evento, ci.nome AS Nome_Cidade, COUNT(ecf.id) AS Quantidade_Favorito
     FROM Evento ev 
     INNER JOIN EventoEstabelecimento ee
         ON ev.id = ee.idEvento
