@@ -27,11 +27,11 @@ CREATE TABLE TipoEvento (
     descricao VARCHAR(50) NOT NULL
 );
 
-
+--------------------------------------------------------------------------
 CREATE TABLE Assinatura (
     id INT PRIMARY KEY IDENTITY(1,1),
-    dataInicio DATE NOT NULL,
-    dataFim DATE,
+    dataInicio DATETIME NOT NULL, ----------------------------------------
+    dataFim DATETIME, ----------------------------------------------------
     status BIT NOT NULL,
     valor DECIMAL(7,2) NOT NULL DEFAULT (900.00),
     dataCadastro DATETIME NOT NULL DEFAULT GETDATE(),
@@ -98,12 +98,13 @@ CREATE TABLE Endereco (
         REFERENCES Cidade (id)
 );
 
+---------------------------------------------------------------------------
 CREATE TABLE PagamentoAssinatura ( 
     id INT PRIMARY KEY IDENTITY(1,1),
     idAssinatura INT NOT NULL,
     idTipoPagamentoAssinatura TINYINT NOT NULL,
-    dataVencimento DATE,
-    dataPagamento DATE NOT NULL,
+    dataVencimento DATETIME, ----------------------------------------------
+    dataPagamento DATETIME NOT NULL, --------------------------------------
     comprovante BIT NOT NULL, 
     valorPago DECIMAL(7,2) NOT NULL,
     desconto DECIMAL(7,2),
