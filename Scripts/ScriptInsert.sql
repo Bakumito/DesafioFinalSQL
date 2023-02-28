@@ -307,6 +307,8 @@ INSERT INTO Cliente VALUES
     (19, 'Eric', 'Wong', '65498712308', '1987-07-29', NULL, 'ericwong@example.com', 'mypassword', GETDATE(), NULL),
     (20, 'Amanda', 'Lin', '95162387409', '1998-11-12', NULL, 'amandalin@example.com', 'mypassword', GETDATE(), NULL);
 
+/*Primeiro Insert comentado, para que o insert possa
+ funcionar perfeitamente (insert com path para teste em maquina específica)*/
 INSERT INTO MidiaCliente VALUES
     --(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL), 
     (2, 0x89504e470d0a1a0a, NULL, GETDATE(), NULL), 
@@ -339,6 +341,8 @@ INSERT INTO Evento VALUES
     (4, 4, 'Desfile de Moda', 'Apresentação de novas coleções de moda', '20230428 19:00:00', '20230428 22:00:00', 200, 'Livre', GETDATE(), NULL),
     (5, 5, 'Feira de Artesanato', 'Exposição de artesanatos regionais', '20230605 10:00:00', '20230605 18:00:00', 500, 'Livre', GETDATE(), '20230218');
 
+/*Primeiro Insert comentado, para que o insert possa
+ funcionar perfeitamente (insert com path para teste em maquina específica)*/
 INSERT INTO MidiaEvento VALUES 
     --(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB ) as vid), GETDATE(), NULL),
     (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
@@ -472,6 +476,8 @@ INSERT INTO CupomEstabelecimento VALUES
     (3, '20230731 00:00:00', 'i0j1k2l3', 1, 1.0, NULL, 'Cupom de fidelidade', 'Desconto de R$10 em qualquer compra', GETDATE(), NULL),
     (4, '20230801 00:00:00', 'm4n5o6p7', 1, 8.0, NULL, 'Cupom de verão', 'Desconto de 8% em produtos de verão', GETDATE(), NULL);
 
+/*Primeiro Insert comentado, para que o insert possa
+ funcionar perfeitamente (insert com path para teste em maquina específica)*/
 INSERT INTO MidiaEstabelecimento VALUES 
 	--(1, (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as img), (SELECT * FROM OPENROWSET(BULK 'C:\Users\SMN\Pictures\Captura de tela 2022-12-29 115624.png', SINGLE_BLOB) as vid), GETDATE(), NULL),
     (2, 0x89504e470d0a1a0a, 0x89504e470d0a1a0a, GETDATE(), NULL),
