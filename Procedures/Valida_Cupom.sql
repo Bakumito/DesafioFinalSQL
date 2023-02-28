@@ -1,3 +1,5 @@
+----------------------------------------------------------------- VERIFICA CUPOM EVENTO ----------------------------------------------------------
+
 IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[SP.Valida_Cupom]') AND objectproperty(ID,N'isProcedure') = 1)
 	DROP PROCEDURE [SP.Valida_Cupom]
 
